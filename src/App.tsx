@@ -3,9 +3,10 @@ import "./App.css";
 // import { Navbar } from "./components/Home/Navbar";
 // import { MainPage } from "./components/Home/MainPage";
 import { Auth } from "./components/Auth/Auth";
-// import { Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { SiteBar } from "./components/Home/Navbar";
 import { Footer } from "./components/Home/Footer";
+import MainPage from "./components/Home/MainPage";
 
 export interface AppProps {}
 
@@ -31,7 +32,8 @@ class App extends React.Component<AppProps, AppState> {
     return (
       <div>
         <SiteBar />
-        <Auth />
+        <Route path="/" component={MainPage} />
+        <Route path="/auth" component={Auth} />
         <Footer />
       </div>
     );
