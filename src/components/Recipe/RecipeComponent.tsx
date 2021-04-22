@@ -1,4 +1,4 @@
-import { IRecipe } from "./iRecipe";
+import { IRecipe } from "./IRecipe";
 import * as React from "react";
 
 const RecipeComponent = (props: { recipe: IRecipe }) => {

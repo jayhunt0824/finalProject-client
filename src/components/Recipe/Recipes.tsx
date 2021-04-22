@@ -1,10 +1,10 @@
 import * as React from "react";
 import { useState, useEffect, FormEvent } from "react";
-import { IRecipe } from "./iRecipe";
+import { IRecipe } from "./IRecipe";
 // import { StringifyOptions } from "node:querystring";
 // import { queryAllByAltText } from '@testing-library/dom';
-import Recipe from "./RecipeComponent";
-import RecipeComponent from "./RecipeComponent";
+import { Recipe } from "./RecipeComponent";
+import { RecipeComponent } from "./RecipeComponent";
 
 function Recipes() {
   const [recipesFound, setRecipesFound] = useState<IRecipe[]>([]);
