@@ -32,8 +32,8 @@ class App extends React.Component<AppProps, AppState> {
     return (
       <div>
         <SiteBar />
-        <Route path="/" component={MainPage} />
-        <Route path="/auth" component={Auth} />
+        <MainPage />
+
         <Footer />
       </div>
     );

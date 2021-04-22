@@ -11,10 +11,12 @@ import {
   CardBody,
 } from "reactstrap";
 
-export interface RecipeCardsProps {}
+export interface RecipeCardsProps {
+  drink: Drink;
+}
 
 export interface RecipeCardsState {
-  character: Drink;
+  drinkinformation: Drink[];
 }
 
 class RecipeCards extends React.Component<RecipeCardsProps, RecipeCardsState> {
@@ -28,11 +30,11 @@ class RecipeCards extends React.Component<RecipeCardsProps, RecipeCardsState> {
         <CardImg
           top
           width="200px"
-          src={props.character.image}
+          src={this.props.drink.strDrinkThumb}
           alt="Card image cap"
         />
         <CardBody>
-          <CardTitle tag="h5">{props.character.name}</CardTitle>
+          <CardTitle tag="h5">{this.props.drink.strDrink}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">
             Card subtitle
           </CardSubtitle>

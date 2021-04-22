@@ -1,21 +1,41 @@
 import * as React from "react";
-import { Component } from "react";
-import { Container } from "reactstrap";
+import RecipeCard from "../Recipes/RecipeCard";
+import { Drink } from "../Recipes/RecipeCardsInterface";
 
 export interface MainPageProps {}
 
-export interface MainPageState {}
+export interface MainPageState {
+  drinkinformation: Drink[];
+}
 
-export class MainPage extends React.Component<MainPageProps, MainPageState> {
+const drinkURL =
+  "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita";
+
+class MainPage extends React.Component<MainPageProps, MainPageState> {
   constructor(props: MainPageProps) {
     super(props);
-    this.state = {};
+    this.state = { drinkinformation: [] };
   }
+
+  componentDidMount() {
+    // console.log("RecipeCard", this.props.url);
+    fetch(drinkURL)
+      .then((res) => res.json())
+      .then((json) => {
+        console.log(json.drinks);
+        this.setState({ drinkinformation: json.drinks });
+      })
+      .catch((error) => console.log(error));
+  }
+
   render() {
     return (
-      <Container>
-        <h1>This is the Main Page</h1>
-      </Container>
+      <div>
+        <RecipeCard
+          url={drinkURL}
+          drinkinformation={this.state.drinkinformation}
+        />
+      </div>
     );
   }
 }

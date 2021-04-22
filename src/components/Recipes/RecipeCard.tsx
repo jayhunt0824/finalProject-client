@@ -1,52 +1,49 @@
-import * as React from 'react';
-import { Component } from 'react';
-import {DrinkResponse, Drink} from "./RecipeCardsInterface";
-import{CardColumns} from "reactstrap";
+import * as React from "react";
+import { Component } from "react";
+import { DrinkResponse, Drink } from "./RecipeCardsInterface";
+import { CardColumns } from "reactstrap";
 import RecipeCards from "./RecipeCards";
 
-
-
 export interface RecipeCardProps {
-    url: string,
-    query: string
-    
+  url: string;
+  drinkinformation: Drink[];
 }
- 
+
 export interface RecipeCardState {
-    drinkinformation: Drink[]
+  //   drinkinformation: Drink[];
 }
- 
+
 class RecipeCard extends React.Component<RecipeCardProps, RecipeCardState> {
-    constructor(props: RecipeCardProps) {
-        super(props);
-        this.state = { drinkinformation: []  };
-    }
+  constructor(props: RecipeCardProps) {
+    super(props);
+    this.state = {};
+  }
 
+  //   componentDidMount() {
+  //     console.log("RecipeCard", this.props.url);
+  //     fetch(this.props.url)
+  //       .then((res) => res.json())
+  //       .then((json) => {
+  //         console.log(json);
+  //         this.setState({ drinkinformation: json.results });
+  //       })
+  //       .catch((error) => console.log(error));
+  //   }
 
-componentDidMount(){
-
-    const url= `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${query}`;
-
-    fetch(this.props.url)
-    .then((res)=>res.json())
-    .then((json: DrinkResponse)=> {
-        console.log(json)
-        this.setState({drinkinformation : json.results})
-    })
+  render() {
+    console.log(this.props.drinkinformation);
+    return (
+      <div>
+        <CardColumns>
+          {this.props.drinkinformation != undefined
+            ? this.props.drinkinformation.map((drink: Drink, index: number) => (
+                <RecipeCards drink={drink} key={index} />
+              ))
+            : ""}
+        </CardColumns>
+      </div>
+    );
+  }
 }
 
-
-
-
-
-    render() { 
-        return ( <div>
-            <CardColumns>
-                {this.state.drinkinformation.map((drink: Drink, index: number))}
-                <RecipeCards drink={Drink} key={index} />
-            </CardColumns>
-        </div> );
-    }
-}
- 
 export default RecipeCard;
