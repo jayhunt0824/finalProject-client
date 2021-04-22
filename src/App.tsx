@@ -6,6 +6,7 @@ import { Auth } from "./components/Auth/Auth";
 // import { Route } from "react-router-dom";
 import { SiteBar } from "./components/Home/Navbar";
 import { Footer } from "./components/Home/Footer";
+import { Recipes } from "./components/Recipe/Recipes";
 
 export interface AppProps {}
 
@@ -31,6 +32,7 @@ class App extends React.Component<AppProps, AppState> {
     return (
       <div>
         <SiteBar />
+        <Recipes />
         <Auth />
         <Footer />
       </div>
