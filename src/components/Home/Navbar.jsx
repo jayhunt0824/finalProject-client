@@ -32,6 +32,7 @@ export class SiteBar extends Component {
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
       <Nav.Link href="/user" to="/user">Login</Nav.Link>
+      <Nav.Link href="/myrecipes" to="/myrecipes">My Recipes</Nav.Link>
       
       {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

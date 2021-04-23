@@ -5,6 +5,7 @@ import { SiteBar } from "./components/Home/Navbar";
 import { Footer } from "./components/Home/Footer";
 import MainPage, { MainPageProps } from "./components/Home/MainPage";
 import { Route } from "react-router-dom";
+import UserRecipeCreate from "./components/User/UserRecipeCreate";
 
 export interface AppProps {
   editSearchTerm?: MainPageProps;
@@ -33,11 +34,8 @@ class App extends React.Component<AppProps, AppState> {
       <div>
         <SiteBar />
         <Route path="/user" component={Auth} />
-        {/* <Auth /> */}
-        <Route path="/">
-          <MainPage />
-        </Route>
-        {/* <MainPage /> */}
+        <Route path="/" component={MainPage} />
+        <Route path="/myrecipes" component={UserRecipeCreate} />
 
         <Footer />
       </div>

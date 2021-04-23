@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+.createRecipe {
+  height: 700px;
+  width: 300px;
+  padding: 30px;
+}
