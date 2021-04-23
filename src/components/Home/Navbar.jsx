@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import { Navbar, NavDropdown, Nav, FormControl, Button, Form} from 'react-bootstrap';
+import {Link} from "react-router-dom";
 
 
 // interface NavbarProps{
@@ -26,11 +27,11 @@ export class SiteBar extends Component {
         return ( 
         <div>
             <Navbar bg="light" expand="lg">
-  <Navbar.Brand href="recipes">React-Bootstrap</Navbar.Brand>
+  <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
-      <Nav.Link href="#recipes" to="/recipes">My Recipes</Nav.Link>
+      <Nav.Link href="/user" to="/user">Login</Nav.Link>
       
       {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

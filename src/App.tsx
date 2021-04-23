@@ -4,6 +4,7 @@ import { Auth } from "./components/Auth/Auth";
 import { SiteBar } from "./components/Home/Navbar";
 import { Footer } from "./components/Home/Footer";
 import MainPage, { MainPageProps } from "./components/Home/MainPage";
+import { Route } from "react-router-dom";
 
 export interface AppProps {
   editSearchTerm?: MainPageProps;
@@ -31,8 +32,12 @@ class App extends React.Component<AppProps, AppState> {
     return (
       <div>
         <SiteBar />
-        <Auth />
-        <MainPage />
+        <Route path="/user" component={Auth} />
+        {/* <Auth /> */}
+        <Route path="/">
+          <MainPage />
+        </Route>
+        {/* <MainPage /> */}
 
         <Footer />
       </div>
