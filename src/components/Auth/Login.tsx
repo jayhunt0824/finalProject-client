@@ -57,7 +57,7 @@ export class Login extends React.Component<LoginProps, LoginState> {
     Object.values(this.state.errors).forEach(
       (val) => val.length > 0 && (validity = false)
     );
-    if (validity == true) {
+    if (validity === true) {
       fetch("http://localhost:3000/user/login", {
         method: "POST",
         body: JSON.stringify({
@@ -65,7 +65,7 @@ export class Login extends React.Component<LoginProps, LoginState> {
           password: this.state.password,
         }),
         headers: new Headers({
-          "content-Type": "application/json",
+          "Content-Type": "application/json",
         }),
       })
         .then((response) => response.json())

@@ -4,15 +4,13 @@ import { Auth } from "./components/Auth/Auth";
 import Sitebar from "./components/Home/Navbar";
 import { Footer } from "./components/Home/Footer";
 import MainPage, { MainPageProps } from "./components/Home/MainPage";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import UserRecipeCreate from "./components/User/UserRecipeCreate";
 
-export interface AppProps {
-  editSearchTerm?: MainPageProps;
-}
+export interface AppProps {}
 
 export interface AppState {
-  // sessionToken: string;
+  sessionToken: string;
 }
 
 class App extends React.Component<AppProps, AppState> {
@@ -23,11 +21,11 @@ class App extends React.Component<AppProps, AppState> {
     };
   }
 
-  // updateToken = (sessionToken: string) => {
-  //   localStorage.setItem("token", sessionToken);
-  //   this.setState({ sessionToken: sessionToken });
-  //   console.log(sessionToken);
-  // };
+  updateToken = (sessionToken: string) => {
+    localStorage.setItem("token", sessionToken);
+    this.setState({ sessionToken: sessionToken });
+    console.log(sessionToken);
+  };
 
   render() {
     return (
@@ -36,7 +34,14 @@ class App extends React.Component<AppProps, AppState> {
         {/* <MainPage /> */}
         <Switch>
           {/* <Route path="/recipe" component={UserRecipeCreate} /> */}
-          <Route exact path="/user" component={Auth} />
+          <Route exact path="/user">
+            {this.state.sessionToken ? (
+              <Redirect to="/myrecipes" />
+            ) : (
+              <Auth updateToken={this.updateToken} />
+            )}
+            {/* </Route> component={Auth} /> */}{" "}
+          </Route>
           <Route exact path="/" component={MainPage} />
           <Route exact path="/myrecipes">
             <UserRecipeCreate />
