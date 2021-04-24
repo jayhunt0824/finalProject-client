@@ -30,8 +30,18 @@ class Sitebar extends React.Component<NavbarProps, NavbarState> {
           <NavbarBrand href="/" id="swig" className="mr-auto">
             SWIG
           </NavbarBrand>
-          <NavbarToggler onClick={this.toggleSitebar} className="mr-2" />
-          <Collapse isOpen={!this.state.collapsed} navbar>
+          <NavItem className="navItem">
+            <Link className="links" to="/user">
+              Login
+            </Link>
+          </NavItem>
+          <NavItem>
+            {/* <Link className="links" to="/myrecipes">
+              Recipes
+            </Link> */}
+          </NavItem>
+          {/* <NavbarToggler onClick={this.toggleSitebar} className="mr-2" />
+          <Collapse isOpen={this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
                 <Link to="/user">Login</Link>
@@ -40,7 +50,7 @@ class Sitebar extends React.Component<NavbarProps, NavbarState> {
                 <Link to="/myrecipes">Recipes</Link>
               </NavItem>
             </Nav>
-          </Collapse>
+          </Collapse> */}
         </Navbar>
       </div>
     );

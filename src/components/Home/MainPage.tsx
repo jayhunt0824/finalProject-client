@@ -3,7 +3,7 @@ import RecipeCard from "../Recipes/RecipeCard";
 import { Drink } from "../Recipes/RecipeCardsInterface";
 import { Input } from "reactstrap";
 import { Jumbotron, Container } from "reactstrap";
-import blackberrycocktail from "./assets/blackberrycocktail.jpg";
+import blackberrycocktail from "./assets/blurred.jpg";
 export interface MainPageProps {
   editSearchTerm?: string;
 }
@@ -53,8 +53,8 @@ class MainPage extends React.Component<MainPageProps, MainPageState> {
           style={{ backgroundColor: "black" }}
           fluid
         >
-          <Container fluid>
-            <img src={blackberrycocktail} alt="" height="340" />
+          <Container>
+            <img className="img" src={blackberrycocktail} alt="" height="340" />
             {/* <h1 className="display-3">Fluid jumbotron</h1>
 
             <p className="lead">
