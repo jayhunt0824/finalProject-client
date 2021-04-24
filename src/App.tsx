@@ -5,7 +5,7 @@ import Sitebar from "./components/Home/Navbar";
 import { Footer } from "./components/Home/Footer";
 import MainPage, { MainPageProps } from "./components/Home/MainPage";
 import { Route, Switch } from "react-router-dom";
-import UserRecipeCreate from "./components/User/UserRecipeCreate.jsx";
+import UserRecipeCreate from "./components/User/UserRecipeCreate";
 
 export interface AppProps {
   editSearchTerm?: MainPageProps;
@@ -36,9 +36,9 @@ class App extends React.Component<AppProps, AppState> {
         {/* <MainPage /> */}
         <Switch>
           {/* <Route path="/recipe" component={UserRecipeCreate} /> */}
-          <Route path="/user" component={Auth} />
-          <Route path="/" component={MainPage} />
-          <Route exact path="/myrecipes" component={UserRecipeCreate}>
+          <Route exact path="/user" component={Auth} />
+          <Route exact path="/" component={MainPage} />
+          <Route exact path="/myrecipes">
             <UserRecipeCreate />
           </Route>
         </Switch>

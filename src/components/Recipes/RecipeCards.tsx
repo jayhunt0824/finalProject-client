@@ -26,7 +26,7 @@ class RecipeCards extends React.Component<RecipeCardsProps, RecipeCardsState> {
   }
   render() {
     return (
-      <Card>
+      <Card className="card">
         <CardImg
           top
           width="200px"
@@ -36,12 +36,9 @@ class RecipeCards extends React.Component<RecipeCardsProps, RecipeCardsState> {
         <CardBody>
           <CardTitle tag="h5">{this.props.drink.strDrink}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">
-            Card subtitle
+            {this.props.drink.strCategory}
           </CardSubtitle>
-          <CardText>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </CardText>
+          <CardText>{this.props.drink.strInstructions}</CardText>
           <Button>Button</Button>
         </CardBody>
       </Card>

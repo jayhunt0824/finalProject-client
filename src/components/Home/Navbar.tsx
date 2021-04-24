@@ -37,7 +37,7 @@ class Sitebar extends React.Component<NavbarProps, NavbarState> {
                 <Link to="/user">Login</Link>
               </NavItem>
               <NavItem>
-                <Link to="/myrecipe">Recipes</Link>
+                <Link to="/myrecipes">Recipes</Link>
               </NavItem>
             </Nav>
           </Collapse>

@@ -30,18 +30,19 @@
 }
 
 .jumbotron {
-  height: 600px;
+  height: 700px;
 }
 
 .img {
-  height: 300px;
-  width: 300px;
+  height: 500px;
+  width: 500px;
   float: left;
   padding: 30px;
 }
 
-.navbar {
+.navBar {
   height: 130px;
+  background-color: black;
 }
 
 .searchBar {
@@ -52,7 +53,7 @@
 }
 
 .footer {
-  background-color: black;
+  background-color: white;
   height: 300px;
 }
 
