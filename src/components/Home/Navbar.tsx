@@ -26,9 +26,9 @@ class Sitebar extends React.Component<NavbarProps, NavbarState> {
   render() {
     return (
       <div>
-        <Navbar>
-          <NavbarBrand href="/" className="mr-auto">
-            reactstrap
+        <Navbar className="navBar">
+          <NavbarBrand href="/" id="swig" className="mr-auto">
+            SWIG
           </NavbarBrand>
           <NavbarToggler onClick={this.toggleSitebar} className="mr-2" />
           <Collapse isOpen={!this.state.collapsed} navbar>

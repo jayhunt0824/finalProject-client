@@ -68,13 +68,15 @@ class MainPage extends React.Component<MainPageProps, MainPageState> {
             this.fetchDrinks(e);
           }}
         >
-          <Input
-            type="text"
-            placeholder="Search Here"
-            value={this.state.drinks}
-            onChange={this.editSearchTerm}
-          />
-          <button type="submit"> Search</button>
+          <div className="searchBar">
+            <Input
+              type="text"
+              placeholder="Search Here"
+              value={this.state.drinks}
+              onChange={this.editSearchTerm}
+            />
+            <button type="submit"> Search</button>
+          </div>
           <h3>Results:</h3>
         </form>
         <RecipeCard
