@@ -8,7 +8,7 @@ export class Footer extends Component {
     this.state = {  }
   }
   render() { 
-    return ( <div>
+    return ( <div className="footer">
       <h1>Hello from footer</h1>
 </div>
     )

@@ -2,7 +2,8 @@ import * as React from "react";
 import RecipeCard from "../Recipes/RecipeCard";
 import { Drink } from "../Recipes/RecipeCardsInterface";
 import { Input } from "reactstrap";
-
+import { Jumbotron, Container } from "reactstrap";
+import blackberrycocktail from "./assets/blackberrycocktail.jpg";
 export interface MainPageProps {
   editSearchTerm?: string;
 }
@@ -43,6 +44,25 @@ class MainPage extends React.Component<MainPageProps, MainPageState> {
   render() {
     return (
       <div>
+        {/* <div className="img">
+          <img src={blackberrycocktail} alt="" height="270" />
+        </div> */}
+
+        <Jumbotron
+          className="jumbotron"
+          style={{ backgroundColor: "black" }}
+          fluid
+        >
+          <Container fluid>
+            <img src={blackberrycocktail} alt="" height="340" />
+            {/* <h1 className="display-3">Fluid jumbotron</h1>
+
+            <p className="lead">
+              This is a modified jumbotron that occupies the entire horizontal
+              space of its parent.
+            </p> */}
+          </Container>
+        </Jumbotron>
         <form
           onClick={(e) => {
             this.fetchDrinks(e);

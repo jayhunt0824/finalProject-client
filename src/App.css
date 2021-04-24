@@ -7,12 +7,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,17 +22,25 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .createRecipe {
   height: 700px;
   width: 300px;
   padding: 30px;
+  background-color: beige;
+}
+
+.jumbotron {
+  height: 500px;
+}
+
+.img {
+  height: 300px;
+  width: 300px;
+  float: left;
+  padding: 30px;
+}
+
+.footer {
+  background-color: black;
+  height: 300px;
 }

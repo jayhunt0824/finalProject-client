@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
 import { Auth } from "./components/Auth/Auth";
-import { SiteBar } from "./components/Home/Navbar";
+import Sitebar from "./components/Home/Navbar";
 import { Footer } from "./components/Home/Footer";
 import MainPage, { MainPageProps } from "./components/Home/MainPage";
-import { Route } from "react-router-dom";
-import UserRecipeCreate from "./components/User/UserRecipeCreate";
+import { Route, Switch } from "react-router-dom";
+import UserRecipeCreate from "./components/User/UserRecipeCreate.jsx";
 
 export interface AppProps {
   editSearchTerm?: MainPageProps;
@@ -32,11 +32,16 @@ class App extends React.Component<AppProps, AppState> {
   render() {
     return (
       <div>
-        <SiteBar />
-        <Route path="/user" component={Auth} />
-        <Route path="/" component={MainPage} />
-        <Route path="/myrecipes" component={UserRecipeCreate} />
-
+        <Sitebar />
+        {/* <MainPage /> */}
+        <Switch>
+          {/* <Route path="/recipe" component={UserRecipeCreate} /> */}
+          <Route path="/user" component={Auth} />
+          <Route path="/" component={MainPage} />
+          <Route exact path="/myrecipes" component={UserRecipeCreate}>
+            <UserRecipeCreate />
+          </Route>
+        </Switch>
         <Footer />
       </div>
     );
