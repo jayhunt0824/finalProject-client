@@ -32,11 +32,6 @@ class App extends React.Component<AppProps, AppState> {
   render() {
     return (
       <div>
-<<<<<<< HEAD
-        <SiteBar />
-
-        <Auth />
-=======
         <Sitebar />
         {/* <MainPage /> */}
         <Switch>
@@ -47,7 +42,6 @@ class App extends React.Component<AppProps, AppState> {
             <UserRecipeCreate />
           </Route>
         </Switch>
->>>>>>> 6bbf4c59b1ab75946c4090781ebcadcb11899680
         <Footer />
       </div>
     );
