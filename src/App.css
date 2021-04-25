@@ -94,12 +94,23 @@
 }
 
 .auth {
-  height: 700px;
+  padding: 100px;
+  height: 1200px;
   background-color: black;
 }
 
+/* .authPicDiv {
+  height: 400px;
+  width: auto;
+} */
+
+.authPic {
+  width: 600px;
+  height: 400px;
+  margin: 0;
+}
+
 #signupLogin {
-  background-color: black;
   height: 400px;
   width: 400px;
   position: relative;
@@ -120,9 +131,15 @@
   left: 40px;
 }
 
-.custom-shape-divider-bottom-1619370106 {
-  position: relative;
-  bottom: -5px;
+.card-columns {
+  width: 1300px;
+  margin: auto;
+  padding: 40px;
+}
+
+/* .custom-shape-divider-bottom-1619372383 {
+  position: absolute;
+  bottom: -360px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -130,13 +147,13 @@
   transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1619370106 svg {
+.custom-shape-divider-bottom-1619372383 svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 169px;
+  height: 177px;
 }
 
-.custom-shape-divider-bottom-1619370106 .shape-fill {
+.custom-shape-divider-bottom-1619372383 .shape-fill {
   fill: #a31754;
-}
+} */

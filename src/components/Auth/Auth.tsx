@@ -2,7 +2,8 @@ import React from "react";
 import { Container, Row, Col, Label } from "reactstrap";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
-import mojitoeffect from "../Home/assets/mojitoeffect.jpg";
+// import mojitoeffect from "../Home/assets/mojitoeffect.jpg";
+import cocktail from "../Home/assets/cocktail.jpg";
 
 export interface AuthProps {
   updateToken: Function;
@@ -26,8 +27,9 @@ export class Auth extends React.Component<AuthProps, AuthState> {
   render() {
     return (
       <div className="auth">
-        <div>
-          <img className="mojito" src={mojitoeffect} alt="" />
+        <div className="authPicDiv">
+          <img className="authPic" src={cocktail} alt="" />
+          {/* <img className="mojito" src={mojitoeffect} alt="" /> */}
         </div>
 
         <Row className="justify-content-md-center" style={{ width: "auto" }}>
