@@ -42,7 +42,7 @@
 }
 
 .navBar {
-  height: 130px;
+  height: 120px;
   background-color: black;
 }
 
@@ -108,12 +108,22 @@
   width: 600px;
   height: 400px;
   margin: 0;
+  position: relative;
 }
+
+/* .authPic2 {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  top: 338px;
+  right: 810px;
+} */
 
 #signupLogin {
   height: 400px;
   width: 400px;
   position: relative;
+  left: 140px;
   text-align: center;
   top: -400px;
   border: 2px solid rgba(255, 166, 0, 0.883);

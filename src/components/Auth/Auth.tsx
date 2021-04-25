@@ -3,7 +3,8 @@ import { Container, Row, Col, Label } from "reactstrap";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
 // import mojitoeffect from "../Home/assets/mojitoeffect.jpg";
-import cocktail from "../Home/assets/cocktail.jpg";
+import background from "../Home/assets/background.jpg";
+import backgroundflip from "../Home/assets/backgroundflip.jpg";
 
 export interface AuthProps {
   updateToken: Function;
@@ -28,7 +29,8 @@ export class Auth extends React.Component<AuthProps, AuthState> {
     return (
       <div className="auth">
         <div className="authPicDiv">
-          <img className="authPic" src={cocktail} alt="" />
+          <img className="authPic" src={background} alt="" />
+          {/* <img className="authPic2" src={backgroundflip} alt="" /> */}
           {/* <img className="mojito" src={mojitoeffect} alt="" /> */}
         </div>
 
@@ -52,6 +54,7 @@ export class Auth extends React.Component<AuthProps, AuthState> {
             color: "rgba(255, 166, 0, 0.883)",
             fontFamily: "Orbitron",
             bottom: 500,
+            left: 140,
           }}
         >
           {this.state.displayLogin ? (
