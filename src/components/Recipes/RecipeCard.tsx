@@ -23,7 +23,7 @@ class RecipeCard extends React.Component<RecipeCardProps, RecipeCardState> {
     return (
       <div>
         <CardColumns>
-          {this.props.drinkinformation != undefined
+          {this.props.drinkinformation !== undefined
             ? this.props.drinkinformation.map((drink: Drink, index: number) => (
                 <RecipeCards drink={drink} key={index} />
               ))
