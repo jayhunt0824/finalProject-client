@@ -85,7 +85,7 @@ export class Login extends React.Component<LoginProps, LoginState> {
 
     return (
       <div className="wrapper">
-        <div className="form-wrapper">
+        <div className="form-wrapper" id="signupLogin">
           <h2>Login</h2>
           <form onSubmit={this.handleSubmit} noValidate>
             <div className="username">

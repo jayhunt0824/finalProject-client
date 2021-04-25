@@ -83,7 +83,7 @@ export class Signup extends React.Component<SignUpProps, SignUpState> {
     const { errors } = this.state;
     return (
       <div className="wrapper">
-        <div className="form-wrapper">
+        <div className="form-wrapper" id="signupLogin">
           <h2>Sign Up</h2>
           <form onSubmit={this.handleSubmit} noValidate>
             <div className="username">

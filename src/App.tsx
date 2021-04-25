@@ -27,9 +27,14 @@ class App extends React.Component<AppProps, AppState> {
     console.log(sessionToken);
   };
 
+  // updateUsername = (newUsername) => {
+  //   localStorage.setItem("Username", newUsername);
+  //   setUsername(newUsername);
+  // };
+
   render() {
     return (
-      <div>
+      <div className="entireApp">
         <Sitebar />
         {/* <MainPage /> */}
         <Switch>
@@ -38,7 +43,10 @@ class App extends React.Component<AppProps, AppState> {
             {this.state.sessionToken ? (
               <Redirect to="/myrecipes" />
             ) : (
-              <Auth updateToken={this.updateToken} />
+              <Auth
+                updateToken={this.updateToken}
+                // updateUsername={this.updateUsername}
+              />
             )}
             {/* </Route> component={Auth} /> */}{" "}
           </Route>
