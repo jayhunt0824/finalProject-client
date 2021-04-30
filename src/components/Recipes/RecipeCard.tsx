@@ -6,6 +6,7 @@ import RecipeCards from "./RecipeCards";
 
 export interface RecipeCardProps {
   drinkinformation: Drink[];
+
 }
 
 export interface RecipeCardState {
@@ -25,7 +26,7 @@ class RecipeCard extends React.Component<RecipeCardProps, RecipeCardState> {
         <CardColumns>
           {this.props.drinkinformation !== undefined
             ? this.props.drinkinformation.map((drink: Drink, index: number) => (
-                <RecipeCards drink={drink} key={index} />
+                <RecipeCards drink={drink}  key={index}  />
               ))
             : ""}
         </CardColumns>

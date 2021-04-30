@@ -34,10 +34,6 @@ class UserRecipeIndex extends React.Component<UserRecipeIndexProps, UserRecipeIn
     
      
 
-    componentDidMount() {
-        this.fetchRecipes();
-        
-    }
 
 
      fetchRecipes = () => {
@@ -88,7 +84,7 @@ class UserRecipeIndex extends React.Component<UserRecipeIndexProps, UserRecipeIn
         </Col>
         <Col md="9">
 
-            {this.state.recipes.length>0 ? (this.state.recipes.map((recipe: IRecipe, index: number)=>(<UserRecipeCards recipe={recipe} deleteRecipe={this.deleteRecipe} editUpdateRecipe={this.editUpdateRecipe}/>))): null}
+            {this.state.recipes.length>0 ? (this.state.recipes.map((recipe: IRecipe, index: number)=>(<UserRecipeCards recipe={recipe} deleteRecipe={this.deleteRecipe}  editUpdateRecipe={this.editUpdateRecipe}/>))): null}
         
         </Col>
        

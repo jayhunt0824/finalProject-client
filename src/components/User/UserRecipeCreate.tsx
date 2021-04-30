@@ -4,7 +4,7 @@ import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 export interface UserRecipeCreateProps {
   token: string;
   fetchRecipes: Function;
-  // deleteImg: Function;
+ 
 }
 
 export interface UserRecipeCreateState {

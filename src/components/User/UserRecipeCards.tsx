@@ -14,9 +14,11 @@ export interface UserRecipeCardsProps {
   // editUpdateRecipe: Function;
   // updateOn: Function;
   recipe: any;
+ 
   // token: string;
   // id: string;
   deleteRecipe: any;
+
   editUpdateRecipe: any;
 }
 
