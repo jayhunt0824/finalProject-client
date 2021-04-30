@@ -1,20 +1,22 @@
+  
 import React from "react";
 import {
   Card, Button, CardImg, CardTitle, CardText, CardColumns,
   CardSubtitle, CardBody
 } from 'reactstrap';
-import UserRecipeIndex from "./UserRecipeIndex";
+// import UserRecipeIndex from "./UserRecipeIndex";
 
 
 
 export interface UserRecipeCardsProps {
 
-  fetchRecipes: Function;
+  // fetchRecipes: Function;
   // editUpdateRecipe: Function;
   // updateOn: Function;
-  recipes: any;
-  token: string;
+  recipe: any;
+  // token: string;
   // id: string;
+  deleteRecipe: any;
 }
 
 export interface UserRecipeCardsState {}
@@ -28,15 +30,15 @@ class UserRecipeCards extends React.Component<
     this.state = {};
   }
 
-  deleteRecipe = (recipe: any) => {
-    fetch(`http://localhost:3000/recipe/delete/${recipe.id}`, {
-      method: "DELETE",
-      headers: new Headers({
-        "Content-Type": "application/json",
-        Authorization: this.props.token,
-      }),
-    }).then(() => this.props.fetchRecipes());
-  };
+  // deleteRecipe = (recipe: any) => {
+  //   fetch(`http://localhost:3000/recipe/delete/${recipe.id}`, {
+  //     method: "DELETE",
+  //     headers: new Headers({
+  //       "Content-Type": "application/json",
+  //       Authorization: this.props.token,
+  //     }),
+  //   }).then(() => this.props.fetchRecipes());
+  // };
 
   // recipeMapper = () => {
   //   return this.props.recipes.map(() => {
@@ -48,22 +50,15 @@ class UserRecipeCards extends React.Component<
   render() {
     return (
       <div>
-      {/* // this.props.recipes */}
+      
      
       <Card>
-            <CardImg top width="200px" src={this.props.recipes} alt="Card image cap" />
+            <CardImg top width="200px" src={this.props.recipe.photoUrl} alt="Card image cap" />
             <CardBody>
-                <CardTitle tag="h5">{this.props.recipes.name}</CardTitle>
-                <CardSubtitle tag="h6" className="mb-2 text-muted">{this.props.recipes.categories}</CardSubtitle>
-                <CardText>{this.props.recipes.ingredients}</CardText>
-                <Button
-                    style={{ backgroundColor: "#4a5759", marginLeft: 5, width: 100}}
-                    // onMouseOver={changeBtn} onMouseLeave={resetBtn}
-                    onClick={this.deleteRecipe
-                    }
-                  >
-                    Delete
-                  </Button>
+                <CardTitle tag="h5">{this.props.recipe.name}</CardTitle>
+                <CardSubtitle tag="h6" className="mb-2 text-muted">{this.props.recipe.categories}</CardSubtitle>
+                <CardText>{this.props.recipe.ingredients}</CardText>
+                <Button onClick={()=>this.props.deleteRecipe(this.props.recipe.id)}>Delete</Button>
             </CardBody>
         </Card>
         </div>

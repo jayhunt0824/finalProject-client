@@ -14,6 +14,7 @@ export interface UserRecipeCreateState {
   photoURL: string;
   categories: string;
   loading: boolean;
+  id: string;
 }
 
 export class UserRecipeCreate extends React.Component<
@@ -29,6 +30,7 @@ export class UserRecipeCreate extends React.Component<
       photoURL: "",
       categories: "Cocktail",
       loading: false,
+     id: '',
     };
   }
 
@@ -62,7 +64,8 @@ export class UserRecipeCreate extends React.Component<
       this.state.name,
       this.state.ingredients,
       this.state.directions,
-      this.state.categories
+      this.state.categories, 
+      this.state.id,
     );
     fetch(`http://localhost:3000/recipe/create`, {
       method: "POST",
@@ -71,6 +74,7 @@ export class UserRecipeCreate extends React.Component<
         ingredients: this.state.ingredients,
         directions: this.state.directions,
         categories: this.state.categories,
+        id: this.state.id,
         // photoURL: this.state.photoURL,
       }),
       headers: new Headers({
@@ -88,6 +92,7 @@ export class UserRecipeCreate extends React.Component<
         this.setState({ ingredients: "" });
         this.setState({ directions: "" });
         this.setState({ photoURL: "" });
+        this.setState({id:""})
         //   this.props.getListOfProducts();
       })
       

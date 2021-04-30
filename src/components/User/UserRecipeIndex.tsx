@@ -11,6 +11,10 @@ export interface UserRecipeIndexProps {
     editUpdateRecipes: Function;
     token: string;
     id: string;
+    fetchRecipes: Function;
+    deleteRecipes: Function;
+    
+    
 }
  
 
@@ -54,7 +58,19 @@ class UserRecipeIndex extends React.Component<UserRecipeIndexProps, UserRecipeIn
           });
       };
 
+      deleteRecipe = ( id: number) => {
+        let token = this.props.token ? this.props.token: localStorage.getItem("token");
 
+
+        fetch(`http://localhost:3000/recipe/delete/${id}`, {
+          method: "DELETE",
+          headers: new Headers({
+            "Content-Type": "application/json",
+            Authorization:  token ? token : "",
+          }),
+        }).then(() => this.fetchRecipes());
+      };
+    
 
 
     render() { 
@@ -62,10 +78,11 @@ class UserRecipeIndex extends React.Component<UserRecipeIndexProps, UserRecipeIn
             <Container>
       <Row>
         <Col md="3">
-          <UserRecipeCreate fetchRecipes={this.fetchRecipes} token={this.props.token} />
+          <UserRecipeCreate fetchRecipes={this.fetchRecipes}  token={this.props.token} />
         </Col>
         <Col md="9">
-            {this.state.recipes.length>0 ? (this.state.recipes.map((recipe: IRecipe, index: number)=>(<UserRecipeCards recipe={recipe}/>))): null}
+
+            {this.state.recipes.length>0 ? (this.state.recipes.map((recipe: IRecipe, index: number)=>(<UserRecipeCards recipe={recipe} deleteRecipe={this.deleteRecipe}/>))): null}
         
         </Col>
      
