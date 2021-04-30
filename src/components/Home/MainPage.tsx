@@ -44,6 +44,7 @@ class MainPage extends React.Component<MainPageProps, MainPageState> {
   render() {
     return (
       <div>
+       
         <div className="coloredMainDiv"></div>
         {/* <div className="img">
           <img src={blackberrycocktail} alt="" height="270" />
@@ -80,7 +81,9 @@ class MainPage extends React.Component<MainPageProps, MainPageState> {
             </button>
           </div>
         </form>
-        <div className="coloredDiv"></div>
+    
+       
+        
 
         <RecipeCard
           // url={drinkURL}

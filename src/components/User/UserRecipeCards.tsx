@@ -38,7 +38,7 @@ class UserRecipeCards extends React.Component<
       <div>
       
      
-      <Card>
+      <Card className="recipeCard">
             <CardImg top width="200px" src={this.props.recipe.photoUrl} alt="Card image cap" />
             <CardBody>
                 <CardTitle tag="h5">{this.props.recipe.name}</CardTitle>
