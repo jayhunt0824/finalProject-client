@@ -17,6 +17,7 @@ export interface UserRecipeCardsProps {
   // token: string;
   // id: string;
   deleteRecipe: any;
+  editUpdateRecipe: any;
 }
 
 export interface UserRecipeCardsState {}
@@ -30,22 +31,7 @@ class UserRecipeCards extends React.Component<
     this.state = {};
   }
 
-  // deleteRecipe = (recipe: any) => {
-  //   fetch(`http://localhost:3000/recipe/delete/${recipe.id}`, {
-  //     method: "DELETE",
-  //     headers: new Headers({
-  //       "Content-Type": "application/json",
-  //       Authorization: this.props.token,
-  //     }),
-  //   }).then(() => this.props.fetchRecipes());
-  // };
 
-  // recipeMapper = () => {
-  //   return this.props.recipes.map(() => {
-  //     return ()
-        
-  //   });
-  // };
 
   render() {
     return (
@@ -58,6 +44,7 @@ class UserRecipeCards extends React.Component<
                 <CardTitle tag="h5">{this.props.recipe.name}</CardTitle>
                 <CardSubtitle tag="h6" className="mb-2 text-muted">{this.props.recipe.categories}</CardSubtitle>
                 <CardText>{this.props.recipe.ingredients}</CardText>
+                <Button onClick={()=>this.props.editUpdateRecipe(this.props.recipe.id)}>Edit</Button>
                 <Button onClick={()=>this.props.deleteRecipe(this.props.recipe.id)}>Delete</Button>
             </CardBody>
         </Card>

@@ -56,14 +56,12 @@ class MainPage extends React.Component<MainPageProps, MainPageState> {
         >
           <Container>
             <img className="img" src={blackberrycocktail} alt="" height="340" />
-            {/* <h1 className="display-3">Fluid jumbotron</h1>
-
-            <p className="lead">
-              This is a modified jumbotron that occupies the entire horizontal
-              space of its parent.
-            </p> */}
+            <div className="blackDiv"></div>
           </Container>
         </Jumbotron>
+      
+
+
         <form
           onClick={(e) => {
             this.fetchDrinks(e);

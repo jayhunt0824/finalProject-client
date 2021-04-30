@@ -37,22 +37,24 @@ class UserRecipeEdit extends React.Component<UserRecipeEditProps, UserRecipeEdit
     }
 
     
-//   recipeUpdate = (event: any, recipe: string) => {
-//     event.preventDefault();
-//     fetch(`http://localhost:3000/recipe/update/${this.props.recipeToUpdate.id}`, {
-//       method: "PUT",
-//       body: JSON.stringify({
-//         log: { Name:this.state.editName, ingredients: this.state.editIng, directions: this.state.editDir, categories: this.state.editCat},
-//       }),
-//       headers: new Headers({
-//         "Content-Type": "application/json",
-//         Authorization: this.props.token,
-//       }),
-//     }).then((res) => {
-//       this.props.fetchRecipes();
-//       this.props.updateOff();
-//     });
-//   };
+  recipeUpdate = (id: number) => {
+    let token = this.props.token ? this.props.token: localStorage.getItem("token");
+
+    // event.preventDefault();
+    fetch(`http://localhost:3000/recipe/update/${id}`, {
+      method: "PUT",
+      // body: JSON.stringify({
+      //  { Name: {this.state.editName}, ingredients: this.state.editIng, directions: this.state.editDir, categories: this.state.editCat},
+      // }),
+      headers: new Headers({
+        "Content-Type": "application/json",
+        Authorization: token ? token : "",
+      }),
+    }).then((res) => {
+      this.props.fetchRecipes();
+      this.props.updateOff();
+    });
+  };
     
     
 

@@ -29,12 +29,12 @@ class RecipeCards extends React.Component<RecipeCardsProps, RecipeCardsState> {
       <div>
         <Card className="card">
           <CardImg src={this.props.drink.strDrinkThumb} alt="Card image cap" />
-          <CardBody>
+          <CardBody style={{backgroundColor: "white", textAlign: "center"}}>
             <CardTitle tag="h5">{this.props.drink.strDrink}</CardTitle>
             <CardSubtitle tag="h6" className="mb-2 text-muted">
               {this.props.drink.strCategory}
             </CardSubtitle>
-            <CardText>{this.props.drink.strInstructions}</CardText>
+            {/* <CardText>{this.props.drink.strInstructions}</CardText> */}
             <Button>Button</Button>
           </CardBody>
         </Card>

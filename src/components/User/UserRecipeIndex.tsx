@@ -8,7 +8,7 @@ import {IRecipe} from "./Interface";
 
 
 export interface UserRecipeIndexProps {
-    editUpdateRecipes: Function;
+    editUpdateRecipe: Function;
     token: string;
     id: string;
     fetchRecipes: Function;
@@ -71,6 +71,12 @@ class UserRecipeIndex extends React.Component<UserRecipeIndexProps, UserRecipeIn
         }).then(() => this.fetchRecipes());
       };
     
+     editUpdateRecipe = (recipe: any) => {
+        this.setState({recipeToUpdate: recipe});
+        console.log(recipe);
+    }
+ 
+      
 
 
     render() { 
@@ -82,9 +88,10 @@ class UserRecipeIndex extends React.Component<UserRecipeIndexProps, UserRecipeIn
         </Col>
         <Col md="9">
 
-            {this.state.recipes.length>0 ? (this.state.recipes.map((recipe: IRecipe, index: number)=>(<UserRecipeCards recipe={recipe} deleteRecipe={this.deleteRecipe}/>))): null}
+            {this.state.recipes.length>0 ? (this.state.recipes.map((recipe: IRecipe, index: number)=>(<UserRecipeCards recipe={recipe} deleteRecipe={this.deleteRecipe} editUpdateRecipe={this.editUpdateRecipe}/>))): null}
         
         </Col>
+       
      
       </Row>
     </Container>
