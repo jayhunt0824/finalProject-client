@@ -27,11 +27,13 @@ class Sitebar extends React.Component<NavbarProps, NavbarState> {
     return (
       <div>
         <Navbar className="navBar">
+          <div className="coloredNavDiv"></div>
           <NavbarBrand href="/" id="swig" className="mr-auto">
             SWIG
           </NavbarBrand>
           <NavItem className="navItem">
             <Link className="links" to="/user">
+              <i className="fas fa-sign-in-alt"></i>
               Login
             </Link>
           </NavItem>

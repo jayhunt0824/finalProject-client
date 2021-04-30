@@ -53,7 +53,7 @@ export class Auth extends React.Component<AuthProps, AuthState> {
             position: "relative",
             color: "rgba(255, 166, 0, 0.883)",
             fontFamily: "Orbitron",
-            bottom: 500,
+            bottom: 550,
             left: 140,
           }}
         >

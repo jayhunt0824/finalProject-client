@@ -5,7 +5,7 @@ import Sitebar from "./components/Home/Navbar";
 import { Footer } from "./components/Home/Footer";
 import MainPage, { MainPageProps } from "./components/Home/MainPage";
 import { Route, Switch, Redirect } from "react-router-dom";
-import { UserRecipeCreate } from "./components/User/UserRecipeCreate";
+import UserRecipeIndex from "./components/User/UserRecipeIndex"
 
 export interface AppProps {}
 
@@ -41,7 +41,7 @@ class App extends React.Component<AppProps, AppState> {
           {/* <Route path="/recipe" component={UserRecipeCreate} /> */}
           <Route exact path="/user">
             {this.state.sessionToken ? (
-              <Redirect to="/myrecipes" />
+              <Redirect to="/recipe" />
             ) : (
               <Auth
                 updateToken={this.updateToken}
@@ -51,7 +51,7 @@ class App extends React.Component<AppProps, AppState> {
             {/* </Route> component={Auth} /> */}{" "}
           </Route>
           <Route exact path="/" component={MainPage} />
-          <Route exact path="/myrecipes" component={UserRecipeCreate}></Route>
+          <Route exact path="/recipe" component={UserRecipeIndex}></Route>
         </Switch>
         <Footer />
       </div>

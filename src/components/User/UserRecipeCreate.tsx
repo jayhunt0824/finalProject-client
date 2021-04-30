@@ -3,15 +3,16 @@ import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 
 export interface UserRecipeCreateProps {
   token: string;
+  fetchRecipes: Function;
   // deleteImg: Function;
 }
 
 export interface UserRecipeCreateState {
-  recipeName: string;
+  name: string;
   ingredients: string;
   directions: string;
   photoURL: string;
-  category: string;
+  categories: string;
   loading: boolean;
 }
 
@@ -22,11 +23,11 @@ export class UserRecipeCreate extends React.Component<
   constructor(props: UserRecipeCreateProps) {
     super(props);
     this.state = {
-      recipeName: "",
+      name: "",
       ingredients: "",
       directions: "",
       photoURL: "",
-      category: "",
+      categories: "Cocktail",
       loading: false,
     };
   }
@@ -36,7 +37,7 @@ export class UserRecipeCreate extends React.Component<
     const files = e.target.files;
     data.append("file", files[0]);
     data.append("upload_preset", "artisan-goods-cloudinary");
-    this.setState({ loading: true });
+    // this.setState({ loading: true });
     const res = await fetch(
       "https://api.cloudinary.com/v1_1/natescloudinary/image/upload",
       {
@@ -55,36 +56,41 @@ export class UserRecipeCreate extends React.Component<
 
   handleSubmit = (e: any) => {
     e.preventDefault();
+    let token = this.props.token ? this.props.token: localStorage.getItem("token");
 
-    fetch(
-      `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=/recipe/create`,
-      {
-        method: "POST",
-        body: JSON.stringify({
-          product: {
-            recipeName: this.state.recipeName,
-            ingredients: this.state.ingredients,
-            directions: this.state.directions,
-            category: this.state.category,
-            photoURL: this.state.photoURL,
-          },
-        }),
-        headers: new Headers({
-          "Content-Type": "application/json",
-          Authorization: this.props.token,
-        }),
-      }
-    )
+    console.log(
+      this.state.name,
+      this.state.ingredients,
+      this.state.directions,
+      this.state.categories
+    );
+    fetch(`http://localhost:3000/recipe/create`, {
+      method: "POST",
+      body: JSON.stringify({
+        name: this.state.name,
+        ingredients: this.state.ingredients,
+        directions: this.state.directions,
+        categories: this.state.categories,
+        // photoURL: this.state.photoURL,
+      }),
+      headers: new Headers({
+        // "Accept": "application/json",
+        "Content-Type": "application/json",
+        Authorization: token ? token : "",
+        
+      }),
+    })
       .then((res) => res.json())
       .then((logData) => {
         console.log("logData -->", logData);
-        this.setState({ recipeName: "" });
+        this.setState({ name: "" });
+        this.setState({ categories: "" });
         this.setState({ ingredients: "" });
         this.setState({ directions: "" });
-        this.setState({ category: "" });
         this.setState({ photoURL: "" });
         //   this.props.getListOfProducts();
       })
+      
       .catch((err) => {
         console.log(err);
       });
@@ -103,10 +109,11 @@ export class UserRecipeCreate extends React.Component<
   };
 
   handleChangeCategory = (e: any) => {
-    this.setState({ category: e.target.value });
+    this.setState({ categories: e.target.value });
   };
 
   render() {
+    // console.log(this.props.token)
     return (
       <div className="createRecipe">
         <h4
@@ -119,37 +126,40 @@ export class UserRecipeCreate extends React.Component<
           <FormGroup>
             <Label htmlFor="recipeName">Name</Label>
             <Input
-              type="number"
-              min="0"
-              name="category"
-              value={this.state.category}
+              name="name"
+              type="text"
+              value={this.state.name}
               onChange={(e) => {
-                this.setState({ category: e.target.value });
+                this.setState({ name: e.target.value });
               }}
             />
           </FormGroup>
           <FormGroup>
             <Label htmlFor="category">Category</Label>
             <Input
-              type="number"
-              min="0"
+              type="select"
               name="category"
-              value={this.state.category}
+              value={this.state.categories}
               onChange={(e) => {
-                this.setState({ category: e.target.value });
+                this.setState({ categories: e.target.value });
               }}
-            />
+            >
+              <option value="Cocktail"> Cocktail </option>
+              <option value="Ordinary Drink"> Ordinary Drink</option>
+              <option value="Martini"> Martini </option>
+              <option value="Shot"> Shot</option>
+              <option value="Punch/Party Drink"> Punch/Party Drink</option>
+            </Input>
           </FormGroup>
 
           <FormGroup>
             <Label htmlFor="ingredients">Ingredients</Label>
             <Input
-              type="number"
-              min="0"
-              name="category"
-              value={this.state.category}
+              type="text"
+              name="Ingredients"
+              value={this.state.ingredients}
               onChange={(e) => {
-                this.setState({ category: e.target.value });
+                this.setState({ ingredients: e.target.value });
               }}
             />
           </FormGroup>
@@ -157,12 +167,11 @@ export class UserRecipeCreate extends React.Component<
           <FormGroup>
             <Label htmlFor="directions">Directions</Label>
             <Input
-              type="number"
-              min="0"
+              type="text"
               name="category"
-              value={this.state.category}
+              value={this.state.directions}
               onChange={(e) => {
-                this.setState({ category: e.target.value });
+                this.setState({ directions: e.target.value });
               }}
             />{" "}
             {/* <Input
