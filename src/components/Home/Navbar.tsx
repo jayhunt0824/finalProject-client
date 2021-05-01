@@ -30,11 +30,9 @@ class Sitebar extends React.Component<NavbarProps, NavbarState> {
 <p>List Based</p>
       <Nav className="navbar" vertical>
         <NavItem>
-        <NavLink to="/user"  href="" className="links" >  <i className="fas fa-sign-in-alt"></i>Login</NavLink> <NavLink href="#">Link</NavLink>
+        <NavLink to="/user"  href="/user" className="links" >  <i className="fas fa-sign-in-alt"></i>Login</NavLink> <NavLink href="#">Link</NavLink>
         </NavItem>
-        <NavItem>
-          <NavLink href="#">Link</NavLink>
-        </NavItem>
+        
      
    
       

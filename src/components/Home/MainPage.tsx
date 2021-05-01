@@ -59,7 +59,7 @@ class MainPage extends React.Component<MainPageProps, MainPageState> {
           style={{ backgroundColor: "black" }}
           fluid
         >
-          <Container>
+          <Container className="container1">
             <img className="tris" src={mainBck} alt=""  />
             {/* <img className="img" src={blackberrycocktail} alt="" height="340" /> */}
             <div className="blackDiv"></div>

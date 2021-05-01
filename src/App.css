@@ -43,13 +43,14 @@
 }
 
 .navbar {
-  height: 900px;
-  width: 200px;
+  height: 700px;
+  width: 300px;
   float: right;
-  background-color: rgb(238, 8, 84);
+  border: black solid 29px;
+  background-color: rgb(102, 209, 88);
   position: relative;
   bottom: 40px;
-  z-index: 20;
+  z-index: 10;
 }
 
 .navItem {
@@ -82,7 +83,7 @@
 z-index: 5;
   border-radius: 25px;
   position: relative;
-  bottom: 550px;
+  bottom: 400px;
 
   background-color: white;
   left: 200px;
@@ -111,7 +112,7 @@ z-index: 2;
 
 .footer {
   background-color: rgba(255, 166, 0, 0.883);
-  height: 300px;
+  height: 500px;
 }
 
 #swig {
@@ -121,23 +122,23 @@ z-index: 2;
   padding: 10px;
 }
 
-.img {
+/* .img {
   height: 600px;
   width: 930px;
   float: right;
   position: relative;
   left: -340px;
-  bottom: 800px;
+  bottom: 700px;
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
   float: none;
   
-}
+} */
 
 .auth {
   padding: 100px;
-  height: 1200px;
+  height: 660px;
   background-color: black;
 }
 
@@ -147,12 +148,12 @@ z-index: 2;
 } */
 
 .authPic {
-  width: 800px;
-  height: 600px;
+  width: 850px;
+  height: 660px;
   margin: 0;
   position: relative;
   right: 310px;
-  bottom: 125px;
+  bottom: 120px;
 }
 
 /* .authPic2 {
@@ -189,11 +190,13 @@ z-index: 2;
   width: 1300px;
   margin: auto;
   padding: 30px;
+  position: relative;
+  top: 200px;
 }
 
 
 
-
+/* 
 .blackDiv{
 
 background: linear-gradient(180deg, rgba(20,13,14,0.02874653279280459) 26%, black 50%, black 100%, black 100%);
@@ -201,7 +204,7 @@ height: 100px;
 position: relative;
 bottom: 760px;
 left: -240px;
-}
+} */
 
 .vDiv{
   width: 150px;
@@ -223,19 +226,19 @@ left: -240px;
 .tris{
   position: relative;
   
-  height: 1200px;
-  width: 1500px;
-bottom: 280px;
+  height: 1100px;
+  width: 1400px;
+bottom: 890px;
   left: -300px;
   z-index: 2;
 }
 
 .logo{
-  font-size: 300px;
+  font-size: 200px;
   color: white;
   z-index: 5;
-  bottom: 1440px;
-  left: 60px;
+  bottom: 1840px;
+  left: -150px;
   /* opacity: 90%; */
   
   text-shadow: 15px 15px 25px black;
@@ -255,3 +258,4 @@ bottom: 280px;
   left: 150px;
   opacity: 70%;
 } */
+
