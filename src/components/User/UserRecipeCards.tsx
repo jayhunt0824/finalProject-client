@@ -4,22 +4,23 @@ import {
   Card, Button, CardImg, CardTitle, CardText, CardColumns,
   CardSubtitle, CardBody
 } from 'reactstrap';
+import UserRecipeEdit from "./UserRecipeEdit";
 // import UserRecipeIndex from "./UserRecipeIndex";
 
 
 
 export interface UserRecipeCardsProps {
 
-  // fetchRecipes: Function;
+  fetchRecipes: Function;
   // editUpdateRecipe: Function;
   // updateOn: Function;
   recipe: any;
  
-  // token: string;
+  token: string;
   // id: string;
   deleteRecipe: any;
 
-  editUpdateRecipe: any;
+ 
 }
 
 export interface UserRecipeCardsState {}
@@ -46,7 +47,7 @@ class UserRecipeCards extends React.Component<
                 <CardTitle tag="h5">{this.props.recipe.name}</CardTitle>
                 <CardSubtitle tag="h6" className="mb-2 text-muted">{this.props.recipe.categories}</CardSubtitle>
                 <CardText>{this.props.recipe.ingredients}</CardText>
-                <Button onClick={()=>this.props.editUpdateRecipe(this.props.recipe.id)}>Edit</Button>
+                <UserRecipeEdit token={this.props.token} fetchRecipes={this.props.fetchRecipes}  />
                 <Button onClick={()=>this.props.deleteRecipe(this.props.recipe.id)}>Delete</Button>
             </CardBody>
         </Card>

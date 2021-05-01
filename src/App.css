@@ -74,7 +74,7 @@
 
 .searchBar {
   width: 450px;
- 
+ z-index: 3;
   border-radius: 25px;
   position: relative;
   bottom: 400px;
@@ -103,12 +103,12 @@
 }
 
 .img {
-  height: 650px;
-  width: 1000px;
+  height: 600px;
+  width: 930px;
   float: right;
   position: relative;
   left: -340px;
-  bottom: 100px;
+  bottom: 700px;
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
@@ -179,7 +179,7 @@
 background: linear-gradient(180deg, rgba(20,13,14,0.02874653279280459) 26%, black 50%, black 100%, black 100%);
 height: 100px;
 position: relative;
-bottom: 170px;
+bottom: 760px;
 left: -240px;
 }
 
@@ -197,4 +197,14 @@ left: -240px;
   margin-bottom: 20px;
   position: relative;
   top: 50px;
+}
+
+.pinktris{
+  position: relative;
+  bottom: 100px;
+  height: 600px;
+  width: 800px;
+  
+  left: 500px;
+  z-index: 2;
 }

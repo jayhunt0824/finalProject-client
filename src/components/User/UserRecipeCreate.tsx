@@ -123,7 +123,7 @@ export class UserRecipeCreate extends React.Component<
       <div className="createRecipe">
         <h4
           id="UserRecipeCreateFont"
-          style={{ fontSize: 40, textAlign: "center" }}
+          style={{ fontSize: 55, textAlign: "center",  fontFamily: "Bebas Neue", color: " rgb(238, 8, 84)" }}
         >
           Create Recipe
         </h4>

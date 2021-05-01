@@ -4,6 +4,11 @@ import { Drink } from "../Recipes/RecipeCardsInterface";
 import { Input } from "reactstrap";
 import { Jumbotron, Container } from "reactstrap";
 import blackberrycocktail from "./assets/blurred.jpg";
+import pinktris from "./assets/pinktris .png";
+
+
+
+
 export interface MainPageProps {
   editSearchTerm?: string;
 }
@@ -56,8 +61,10 @@ class MainPage extends React.Component<MainPageProps, MainPageState> {
           fluid
         >
           <Container>
+            <img className="pinktris" src={pinktris} alt=""  />
             <img className="img" src={blackberrycocktail} alt="" height="340" />
             <div className="blackDiv"></div>
+
           </Container>
         </Jumbotron>
       
