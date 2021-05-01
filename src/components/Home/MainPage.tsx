@@ -4,8 +4,7 @@ import { Drink } from "../Recipes/RecipeCardsInterface";
 import { Input } from "reactstrap";
 import { Jumbotron, Container } from "reactstrap";
 import blackberrycocktail from "./assets/blurred.jpg";
-import pinktris from "./assets/pinktris .png";
-
+import mainBck from "./assets/SWIG.jpg";
 
 
 
@@ -61,12 +60,14 @@ class MainPage extends React.Component<MainPageProps, MainPageState> {
           fluid
         >
           <Container>
-            <img className="pinktris" src={pinktris} alt=""  />
-            <img className="img" src={blackberrycocktail} alt="" height="340" />
+            <img className="tris" src={mainBck} alt=""  />
+            {/* <img className="img" src={blackberrycocktail} alt="" height="340" /> */}
             <div className="blackDiv"></div>
+        <h1 className="logo">SWIG</h1>
 
           </Container>
         </Jumbotron>
+        <div className="whiteDiv"></div>
       
 
 
@@ -75,8 +76,8 @@ class MainPage extends React.Component<MainPageProps, MainPageState> {
             this.fetchDrinks(e);
           }}
         >
-          <div className="searchBar">
-            <Input
+          <div className="searchBarDiv">
+            <Input className="searchBar"
               type="text"
               placeholder="Search Here"
               value={this.state.drinks}

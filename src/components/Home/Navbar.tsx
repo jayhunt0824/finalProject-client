@@ -26,6 +26,34 @@ class Sitebar extends React.Component<NavbarProps, NavbarState> {
   render() {
     return (
       <div>
+
+<p>List Based</p>
+      <Nav className="navbar" vertical>
+        <NavItem>
+        <NavLink to="/user"  href="" className="links" >  <i className="fas fa-sign-in-alt"></i>Login</NavLink> <NavLink href="#">Link</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="#">Link</NavLink>
+        </NavItem>
+     
+   
+      
+       
+      </Nav>
+
+
+
+
+
+
+
+
+
+
+{/* 
+
+
+
         <Navbar className="navBar">
           <div className="coloredNavDiv"></div>
           <NavbarBrand href="/" id="swig" className="mr-auto">
@@ -38,11 +66,9 @@ class Sitebar extends React.Component<NavbarProps, NavbarState> {
             </Link>
           </NavItem>
           <NavItem>
-            {/* <Link className="links" to="/myrecipes">
-              Recipes
-            </Link> */}
+            
           </NavItem>
-          {/* <NavbarToggler onClick={this.toggleSitebar} className="mr-2" />
+          <NavbarToggler onClick={this.toggleSitebar} className="mr-2" />
           <Collapse isOpen={this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
@@ -52,8 +78,8 @@ class Sitebar extends React.Component<NavbarProps, NavbarState> {
                 <Link to="/myrecipes">Recipes</Link>
               </NavItem>
             </Nav>
-          </Collapse> */}
-        </Navbar>
+          </Collapse>
+        </Navbar> */}
       </div>
     );
   }
