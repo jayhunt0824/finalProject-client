@@ -45,7 +45,7 @@ class RecipeCards extends React.Component<RecipeCardsProps, RecipeCardsState> {
               {this.props.drink.strCategory}
             </CardSubtitle>
             {/* <CardText>{this.props.drink.strInstructions}</CardText> */}
-            <Button className="recipeBtn" onClick={this.toggle}>Button</Button>
+            <Button className="btn-grad" onClick={this.toggle}>View</Button>
             <Modal  className="drinkModal" isOpen={this.state.modal} toggle={this.toggle} >
           <ModalHeader  className="myModalHeader" toggle={this.toggle}>{this.props.drink.strDrink}</ModalHeader>
           <ModalBody>

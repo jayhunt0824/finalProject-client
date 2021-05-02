@@ -22,9 +22,9 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* .App-link {
+  color: black;
+} */
 
 .createRecipe {
   height: 850px;
@@ -50,7 +50,7 @@
   border: black solid 29px;
   /* background-color: #FEE140;
   background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%); */
-  background-color: rgba(255, 166, 0, 0.883);
+  background-color: rgb(238, 8, 84);
   position: relative;
   bottom: 40px;
   z-index: 30;
@@ -72,7 +72,7 @@
 } */
 
 .links {
-  color: rgb(9, 190, 214);
+  color: black;
   font-size: 25px;
   font-family: "Orbitron", sans-serif;
   position: relative;
@@ -197,7 +197,8 @@ z-index: 2;
   margin: auto;
   padding: 30px;
   position: relative;
-  top: -300px;
+  top: -450px;
+  z-index: 20;
 }
 
 
@@ -277,10 +278,32 @@ background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
 
 }
 
-.recipeBtn{
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
-}
+ 
+
+.btn-grad {background-image: linear-gradient(to right, #F2994A 0%, #F2C94C  51%, #F2994A  100%)}
+.btn-grad {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   border: white 2px solid;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   /* box-shadow: 0 0 20px #eee; */
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+
+
 /* 
 .fetchCard{
   box-shadow: 10px 10px 15px rgb(238, 8, 84);
