@@ -5,7 +5,8 @@ import Sitebar from "./components/Home/Navbar";
 import { Footer } from "./components/Home/Footer";
 import MainPage, { MainPageProps } from "./components/Home/MainPage";
 import { Route, Switch, Redirect } from "react-router-dom";
-import UserRecipeIndex from "./components/User/UserRecipeIndex"
+import UserRecipeIndex from "./components/User/UserRecipeIndex";
+
 
 export interface AppProps {}
 
@@ -35,6 +36,7 @@ class App extends React.Component<AppProps, AppState> {
   render() {
     return (
       <div className="entireApp">
+         
             {/* <div className="vDiv"></div> */}
         
         <Sitebar />

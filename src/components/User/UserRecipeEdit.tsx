@@ -70,11 +70,11 @@ toggle=()=>{
           <div>
              <Button  onClick={this.toggle}>Edit</Button>
       <Modal isOpen={!this.state.modal} toggle={this.toggle} >
-        <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+        <ModalHeader className="myModalHeader2" toggle={this.toggle}>Modal title</ModalHeader>
         <ModalBody style={{height: "500px"}}>
         <Form >
             <FormGroup>
-              <Label htmlFor="Name">Edit Name:</Label>
+              <Label htmlFor="Name"> Edit Name:</Label>
               <Input
                 name="result"
                 value={this.state.editName}

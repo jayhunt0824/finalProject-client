@@ -37,7 +37,7 @@ class RecipeCards extends React.Component<RecipeCardsProps, RecipeCardsState> {
   render() {
     return (
       <div>
-        <Card className="card">
+        <Card className="fetchCard" style={{backgroundColor: "black",}}>
           <CardImg src={this.props.drink.strDrinkThumb} alt="Card image cap" />
           <CardBody style={{backgroundColor: "white", textAlign: "center"}}>
             <CardTitle tag="h5">{this.props.drink.strDrink}</CardTitle>
@@ -45,9 +45,9 @@ class RecipeCards extends React.Component<RecipeCardsProps, RecipeCardsState> {
               {this.props.drink.strCategory}
             </CardSubtitle>
             {/* <CardText>{this.props.drink.strInstructions}</CardText> */}
-            <Button onClick={this.toggle}>Button</Button>
+            <Button className="recipeBtn" onClick={this.toggle}>Button</Button>
             <Modal  className="drinkModal" isOpen={this.state.modal} toggle={this.toggle} >
-          <ModalHeader style={{backgroundColor: "rgb(255, 166, 0, 0.883)"}} toggle={this.toggle}>{this.props.drink.strDrink}</ModalHeader>
+          <ModalHeader  className="myModalHeader" toggle={this.toggle}>{this.props.drink.strDrink}</ModalHeader>
           <ModalBody>
          
           {this.props.drink.strTags}
