@@ -13,7 +13,7 @@ import {
 
 
 export interface UserRecipeEditProps {
-    token: string;
+    sessionToken: string;
     fetchRecipes: Function;
     // updateOff: Function;
     // recipeToUpdate: Function;
@@ -40,7 +40,7 @@ class UserRecipeEdit extends React.Component<UserRecipeEditProps, UserRecipeEdit
 
     
   recipeUpdate = (id: number) => {
-    let token = this.props.token ? this.props.token: localStorage.getItem("token");
+    let token = this.props.sessionToken ? this.props.sessionToken: localStorage.getItem("token");
 
     // event.preventDefault();
     fetch(`http://localhost:3000/recipe/update/${id}`, {
