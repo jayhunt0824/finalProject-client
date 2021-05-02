@@ -78,12 +78,12 @@
 }
 
 .searchBar {
-  width: 500px;
+  width: 00px;
   height: 500px;
 z-index: 5;
   border-radius: 25px;
   position: relative;
-  bottom: 400px;
+  bottom: 800px;
 
   background-color: white;
   left: 200px;
@@ -104,7 +104,9 @@ z-index: 2;
 .searchBtn {
   height: 40px;
   position: relative;
-  top: 20px;
+  bottom: 780px;
+  left: 200px;
+  z-index: 21;
   width: 90px;
   font-family: "Orbitron", sans-serif;
   border-radius: 10px;
@@ -247,15 +249,15 @@ bottom: 890px;
   
 }
 
-/* .whiteDiv{
-  height: 800px;
-  width: 1200px;
+.whiteDiv{
+  height: 490px;
+  width: 1500px;
   border-radius: 20px;
-  background-color: white;
+  background-color: black;
   z-index: 3;
   position: relative;
-  bottom: 650px;
-  left: 150px;
-  opacity: 70%;
-} */
+  bottom: 550px;
+  left: -20px;
+  opacity: 40%;
+}
 
