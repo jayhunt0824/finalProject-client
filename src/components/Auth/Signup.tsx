@@ -109,7 +109,7 @@ export class Signup extends React.Component<SignUpProps, SignUpState> {
               )}
             </div>
             <div className="submit">
-              <button>Sign Me Up!</button>
+              <button className="lsbtn">Sign Me Up!</button>
             </div>
           </form>
         </div>

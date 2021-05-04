@@ -111,7 +111,7 @@ export class Login extends React.Component<LoginProps, LoginState> {
               )}
             </div>
             <div className="submit">
-              <button>Login!</button>
+              <button className="lsbtn">Login!</button>
             </div>
           </form>
         </div>

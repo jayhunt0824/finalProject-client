@@ -55,7 +55,7 @@ class RecipeCards extends React.Component<RecipeCardsProps, RecipeCardsState> {
           
 
           </ModalBody>
-          <ModalFooter>
+          <ModalFooter className="myModalFooter">
             <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
             <Button color="secondary" onClick={this.toggle}>Cancel</Button>
           </ModalFooter>

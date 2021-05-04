@@ -281,31 +281,36 @@ background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
 
  
 
-.btn-grad {background-image: linear-gradient(to right, #F2994A 0%, #F2C94C  51%, #F2994A  100%)}
-.btn-grad {
-   margin: 10px;
-   padding: 15px 45px;
-   text-align: center;
-   border: white 2px solid;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   /* box-shadow: 0 0 20px #eee; */
-   border-radius: 10px;
-   display: block;
- }
+.btn-grad {background-color: #FEE140;
+  width: 300px;
+  background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
+  outline: white;
+  box-shadow: grey 5px 5px 5px;
+  
+}
 
- .btn-grad:hover {
-   background-position: right center; /* change the direction of the change here */
-   color: #fff;
-   text-decoration: none;
- }
-
-
+.myModalFooter{
+  background-color: #FEE140;
+background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
+}
 
 /* 
 .fetchCard{
   box-shadow: 10px 10px 15px rgb(238, 8, 84);
 } */
 
+.cardbtn{
+  background-color: #FEE140;
+background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
+width: 200px;
+}
+
+.lsbtn{
+  background-color: #FEE140;
+background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
+width:100px;
+height: 40px;
+position: relative;
+top: 30px;
+border-radius: 10px;
+}
