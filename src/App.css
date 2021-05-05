@@ -31,7 +31,9 @@
   width: 350px;
   padding: 30px;
   background-color: black;
-  color: rgba(255, 166, 0, 0.883);
+  border: .5px solid rgb(234, 238, 8);
+  border-radius: 5px;
+  color: rgb(234, 238, 8);
   font-family: "Orbitron", sans-serif;
   position: relative;
   top: 0px; 
@@ -87,7 +89,7 @@ z-index: 5;
   border-radius: 25px;
   position: relative;
   bottom: 800px;
-
+box-shadow: rgb(234, 238, 8) 5px 5px 10px;
   background-color: white;
   left: 00px;
 }
@@ -115,7 +117,7 @@ z-index: 20;
 }
 
 .footer {
-  background-color: rgba(255, 166, 0, 0.883);
+  background-color: rgb(234, 238, 8) ;
   height: 500px;
 }
 
@@ -299,11 +301,11 @@ background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
   box-shadow: 10px 10px 15px rgb(238, 8, 84);
 } */
 
-.cardbtn{
+/* .cardbtn{
   background-color: #FEE140;
 background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
 width: 200px;
-}
+} */
 
 .lsbtn{
   background-color: #FEE140;
@@ -314,3 +316,4 @@ position: relative;
 top: 30px;
 border-radius: 10px;
 }
+

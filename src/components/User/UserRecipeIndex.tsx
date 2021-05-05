@@ -22,7 +22,7 @@ export interface UserRecipeIndexProps {
 
 export interface UserRecipeIndexState {
     recipes: IRecipe[] ;
-    recipeToUpdate: string
+    recipeToUpdate: string;
    
 }
  

@@ -16,7 +16,8 @@ export interface UserRecipeEditProps {
     sessionToken: string;
     fetchRecipes: Function;
     // updateOff: Function;
-    // recipeToUpdate: Function;
+    editRecipe: any;
+    id: number ;
   
    
 }
@@ -26,7 +27,7 @@ export interface UserRecipeEditState {
     editIng: string;
     editDir: string;
     editCat: string;
-    id: string;
+    // recipe: this.props.recipeUpdate ? this.props.recipeUpdate.id: null
     modal: boolean;
     
     
@@ -35,26 +36,29 @@ export interface UserRecipeEditState {
 class UserRecipeEdit extends React.Component<UserRecipeEditProps, UserRecipeEditState> {
     constructor(props: UserRecipeEditProps) {
         super(props);
-        this.state = { editName: "", editIng: "", editDir: "", editCat: "" , id: "", modal: true };
+        this.state = { editName: "", editIng: "", editDir: "", editCat: ""  , modal: true };
     }
 
     
-  recipeUpdate = (id: number) => {
+  recipeUpdate = (event: any) => {
     let token = this.props.sessionToken ? this.props.sessionToken: localStorage.getItem("token");
-
-    // event.preventDefault();
-    fetch(`http://localhost:3000/recipe/update/${id}`, {
+    console.log("recipeUpdate", this.props.id)
+    event.preventDefault();
+    fetch(`http://localhost:3000/recipe/update/${this.props.id}`, {
       method: "PUT",
-      // body: JSON.stringify({
-      //  { Name: {this.state.editName}, ingredients: this.state.editIng, directions: this.state.editDir, categories: this.state.editCat},
-      // }),
+      body: JSON.stringify({
+        name: this.state.editName, ingredients: this.state.editIng, directions: this.state.editDir, categories: this.state.editCat,
+      }),
       headers: new Headers({
         "Content-Type": "application/json",
         Authorization: token ? token : "",
       }),
-    }).then((res) => {
+    }).then((res) => res.json()) 
+    .then(()=> {
       this.props.fetchRecipes();
+      
       // this.props.updateOff();
+     
     });
   };
     
@@ -72,7 +76,7 @@ toggle=()=>{
       <Modal isOpen={!this.state.modal} toggle={this.toggle} >
         <ModalHeader className="myModalHeader2" toggle={this.toggle}>Modal title</ModalHeader>
         <ModalBody style={{height: "500px"}}>
-        <Form >
+        <Form onSubmit={(event)=>this.recipeUpdate(event)} >
             <FormGroup>
               <Label htmlFor="Name"> Edit Name:</Label>
               <Input
@@ -108,6 +112,7 @@ toggle=()=>{
               <Label htmlFor="Ingredients">Edit Ingredients:</Label>
               <Input
                 Ingredients="Ingredients"
+                style={{height: "50px"}}
                 value={this.state.editIng}
                 onChange={(e) => this.setState({editIng: e.target.value})}
               />
@@ -116,6 +121,7 @@ toggle=()=>{
               <Label htmlFor="Directions">Edit Directions:</Label>
               <Input
                 Directions="Directions"
+                style={{height: "100px"}}
                 value={this.state.editDir}
                 onChange={(e) => this.setState({editDir: e.target.value})}
               />
@@ -128,10 +134,10 @@ toggle=()=>{
                     <Button size= 'sm' color='outline-danger' disabled={loading} disabled={loading} onClick={deleteImg}>Delete image</Button>
                 </FormGroup> */}
             
+        <Button onClick={this.toggle} type="submit">Update the Recipe!</Button>
           </Form>
         </ModalBody>
         <ModalFooter>
-        <Button Type="submit">Update the Recipe!</Button>
           {/* <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
           <Button color="secondary" onClick={this.toggle}>Cancel</Button> */}
         </ModalFooter>

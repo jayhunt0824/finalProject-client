@@ -75,7 +75,7 @@ export class UserRecipeCreate extends React.Component<
         directions: this.state.directions,
         categories: this.state.categories,
         id: this.state.id,
-        // photoURL: this.state.photoURL,
+        photoURL: this.state.photoURL,
       }),
       headers: new Headers({
         // "Accept": "application/json",

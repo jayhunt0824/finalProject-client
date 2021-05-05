@@ -19,11 +19,14 @@ export interface UserRecipeCardsProps {
   sessionToken: string;
   // id: string;
   deleteRecipe: any;
+ 
 
  
 }
 
-export interface UserRecipeCardsState {}
+export interface UserRecipeCardsState {
+  editRecipe: any | null;
+}
 
 class UserRecipeCards extends React.Component<
   UserRecipeCardsProps,
@@ -31,7 +34,7 @@ class UserRecipeCards extends React.Component<
 > {
   constructor(props: UserRecipeCardsProps) {
     super(props);
-    this.state = {};
+    this.state = { editRecipe: null};
   }
 
 
@@ -42,12 +45,12 @@ class UserRecipeCards extends React.Component<
       
      
       <Card className="recipeCard">
-            <CardImg top width="200px" src={this.props.recipe.photoUrl} alt="Card image cap" />
+            <CardImg top width="200px"  src={this.props.recipe.photoURL} alt="Card image cap" />
             <CardBody>
                 <CardTitle tag="h5">{this.props.recipe.name}</CardTitle>
                 <CardSubtitle tag="h6" className="mb-2 text-muted">{this.props.recipe.categories}</CardSubtitle>
                 <CardText>{this.props.recipe.ingredients}</CardText>
-                <UserRecipeEdit sessionToken={this.props.sessionToken} fetchRecipes={this.props.fetchRecipes}  />
+                <UserRecipeEdit sessionToken={this.props.sessionToken} fetchRecipes={this.props.fetchRecipes} editRecipe={this.state.editRecipe} id={this.props.recipe.id}  />
                 <Button className="cardbtn" onClick={()=>this.props.deleteRecipe(this.props.recipe.id)}>Delete</Button>
             </CardBody>
         </Card>
