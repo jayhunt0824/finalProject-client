@@ -56,6 +56,7 @@
   position: relative;
   bottom: 40px;
   z-index: 30;
+  margin-top: 40px;
 }
 
 .navItem {
@@ -76,11 +77,22 @@
 .links {
   color: black;
   font-size: 25px;
+  position: relative;
+
+margin-bottom: 10px;
   font-family: "Orbitron", sans-serif;
   position: relative;
   right: 0px;
-  top: 10px;
+  top: 20px;
 }
+
+/* .drinklogo{
+  height: 150px;
+  width: 150px;
+  position: relative;
+  left: 30px;
+  bottom: 10px;
+} */
 
 .searchBar {
   width: 0px;
@@ -143,9 +155,10 @@ z-index: 20;
 } */
 
 .auth {
-  padding: 100px;
+  
   height: 660px;
   background-color: black;
+  margin-bottom: 200px;
 }
 
 /* .authPicDiv {
@@ -158,8 +171,9 @@ z-index: 20;
   height: 660px;
   margin: 0;
   position: relative;
-  right: 310px;
-  bottom: 120px;
+  right: 200px;
+  bottom: -20px;
+
 }
 
 /* .authPic2 {
@@ -172,12 +186,13 @@ z-index: 20;
 
 #signupLogin {
   height: 400px;
-  width: 400px;
+  width: 700px;
   position: relative;
-  left: 140px;
+  left: 120px;
   text-align: center;
-  top: -620px;
-  border: 2px solid rgb(238, 8, 84);
+  top: -520px;
+  background-color: black;
+  border: 2px solid rgb(234, 238, 8);
   box-shadow: 10px 10px 15px rgb(238, 8, 84);
   border-radius: 10px;
   color: rgb(234, 238, 8);
@@ -225,7 +240,7 @@ left: -240px;
 
 .tris{
   position: relative;
-  
+  /* margin-top: 40px; */
   height: 1100px;
   width: 1400px;
 bottom: 890px;
@@ -438,4 +453,8 @@ z-index: 1;
    z-index: 4;
    right: 300px;
    
+ }
+
+ .createContainer{
+  margin-bottom: 200px;
  }

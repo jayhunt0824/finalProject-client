@@ -5,6 +5,7 @@ import { Login } from "./Login";
 // import mojitoeffect from "../Home/assets/mojitoeffect.jpg";
 import background from "../Home/assets/background.jpg";
 import backgroundflip from "../Home/assets/backgroundflip.jpg";
+import drinklogo from "../Home/assets/nobackground.png";
 
 export interface AuthProps {
   updateToken: Function;
@@ -30,6 +31,7 @@ export class Auth extends React.Component<AuthProps, AuthState> {
       <div className="auth">
         <div className="authPicDiv">
           <img className="authPic" src={background} alt="" />
+          {/* <img className="drinklogo" src={drinklogo} alt="" /> */}
           {/* <img className="authPic2" src={backgroundflip} alt="" /> */}
           {/* <img className="mojito" src={mojitoeffect} alt="" /> */}
         </div>

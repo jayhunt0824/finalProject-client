@@ -9,6 +9,9 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
+
+
+
 export interface NavbarProps {
  
   
@@ -39,8 +42,8 @@ class Sitebar extends React.Component<NavbarProps, NavbarState> {
     return (
       <div>
 
-<p>List Based</p>
       <Nav className="navbar" vertical>
+       
       <NavItem>
         <NavLink to="/"  href="/" className="links" >  <i className="fas fa-home"></i>Home</NavLink>
        

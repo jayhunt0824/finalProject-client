@@ -81,7 +81,7 @@ class UserRecipeIndex extends React.Component<UserRecipeIndexProps, UserRecipeIn
 
     render() { 
         return (
-            <Container>
+            <Container className="createContainer">
               
       <Row>
         <Col md="3">
