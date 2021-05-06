@@ -1,15 +1,20 @@
 .App {
   text-align: center;
+  
 }
 
 .entireApp {
   background-color: black;
+ 
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+
+
 
 .App-header {
   background-color: #282c34;
@@ -42,7 +47,8 @@
 }
 
 .jumbotron {
-  height: 580px;
+  height: 700px;
+  width: auto;
 }
 
 .navbar {
@@ -100,7 +106,7 @@ margin-bottom: 10px;
 z-index: 5;
   border-radius: 25px;
   position: relative;
-  bottom: 800px;
+  bottom: 920px;
 box-shadow: rgb(234, 238, 8) 5px 5px 10px;
   background-color: white;
   left: 00px;
@@ -120,7 +126,7 @@ z-index: 20;
 .searchBtn {
   height: 40px;
   position: relative;
-  bottom: 760px;
+  bottom: 880px;
   left: 350px;
   z-index: 21;
   width: 200px;
@@ -134,6 +140,9 @@ z-index: 20;
 .footer {
   background-color: rgb(234, 238, 8) ;
   height: 500px;
+  padding: 200px;
+
+  text-align: center;
 }
 
 /* #swig {
@@ -160,7 +169,7 @@ z-index: 20;
 
 .auth {
   
-  height: 660px;
+  height: 510px;
   background-color: black;
   margin-bottom: 200px;
 }
@@ -277,7 +286,7 @@ bottom: 890px;
   background-color: black;
   z-index: 3;
   position: relative;
-  bottom: 450px;
+  bottom: 550px;
   left: 0px;
   opacity: 60%;
 }
@@ -380,7 +389,7 @@ right: 300px;
 
 
 .cardWhiteDiv{
-  height: 400px;
+  height: 500px;
   width: 750px;
 z-index: 1;
   background-color: white;
@@ -399,7 +408,7 @@ z-index: 1;
 }
 
 .recipeCard{
-  height: 400px;
+  height: 500px;
   width: 750px;
   margin-bottom: 20px;
   position: relative;
