@@ -84,11 +84,11 @@ export class Signup extends React.Component<SignUpProps, SignUpState> {
     return (
       <div className="wrapper">
         <div className="form-wrapper" id="signupLogin">
-          <h2>Sign Up</h2>
+          <h2 className="lsHeader">Sign Up</h2>
           <form onSubmit={this.handleSubmit} noValidate>
             <div className="username">
-              <label htmlFor="username">Username</label>
-              <input
+              <label htmlFor="username">Username:</label>
+              <input style={{width: "400px", marginLeft: "30px", marginTop: "40px"}}
                 type="username"
                 name="username"
                 onChange={this.handleChange}
@@ -98,8 +98,8 @@ export class Signup extends React.Component<SignUpProps, SignUpState> {
               )}
             </div>
             <div className="password">
-              <label htmlFor="password">Password</label>
-              <input
+              <label htmlFor="password">Password:</label>
+              <input style={{width: "400px", marginLeft: "30px"}}
                 type="password"
                 name="password"
                 onChange={this.handleChange}

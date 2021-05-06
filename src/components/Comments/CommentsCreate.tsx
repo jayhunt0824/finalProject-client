@@ -74,7 +74,7 @@ handleSubmit =(e: any) => {
     render() { 
         return ( <div className="createDiv">
            <h4 className="commentsH">What's on your mind?</h4>
-           <Form style={{color: "rgb(234, 238, 8)" }}onSubmit={this.handleSubmit}>
+           <Form style={{color: "rgb(234, 238, 8)"  }}onSubmit={this.handleSubmit}>
           <FormGroup>
             <Label htmlFor="comment"></Label>
             <Input
@@ -86,7 +86,7 @@ handleSubmit =(e: any) => {
               }}
             />
              <Button className="postbtn"
-              style={{ width: 120, backgroundColor: "#f5f5f5", color: "black" }}
+              style={{ width: 120, backgroundColor: "#f5f5f5", color: "white", marginTop: "10px" }}
               type="submit"
             >
               Post!

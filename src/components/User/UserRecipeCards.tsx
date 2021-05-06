@@ -56,7 +56,7 @@ class UserRecipeCards extends React.Component<
                 <CardSubtitle id="myCardSubD" tag="h6" className="mb-2 text-muted">Directions:</CardSubtitle>
                 <CardText className="myCardDir">{this.props.recipe.directions}</CardText>
                 <UserRecipeEdit sessionToken={this.props.sessionToken} fetchRecipes={this.props.fetchRecipes} editRecipe={this.state.editRecipe} id={this.props.recipe.id}  />
-                <Button className="cardbtn" onClick={()=>this.props.deleteRecipe(this.props.recipe.id)}>Delete</Button>
+                <Button className="mycarddbtn" onClick={()=>this.props.deleteRecipe(this.props.recipe.id)}>Delete</Button>
             </CardBody>
         </Card>
         </div>

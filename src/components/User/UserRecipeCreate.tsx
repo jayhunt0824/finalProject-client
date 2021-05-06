@@ -211,7 +211,7 @@ export class UserRecipeCreate extends React.Component<
           <br />
           <div className="align-middle text-center">
             <Button className="subbtn"
-              style={{ width: 120, backgroundColor: "#f5f5f5", color: "black" }}
+              style={{ width: 120, backgroundColor: "#f5f5f5", color: "white" }}
               type="submit"
             >
               Submit

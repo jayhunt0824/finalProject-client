@@ -86,11 +86,11 @@ export class Login extends React.Component<LoginProps, LoginState> {
     return (
       <div className="wrapper">
         <div className="form-wrapper" id="signupLogin">
-          <h2>Login</h2>
+          <h2 className="lsHeader">Login</h2>
           <form onSubmit={this.handleSubmit} noValidate>
             <div className="username">
-              <label htmlFor="username">Username</label>
-              <input
+              <label htmlFor="username">Username:</label>
+              <input style={{width: "400px", marginTop: "40px", marginLeft: "30px"}}
                 type="username"
                 name="username"
                 onChange={this.handleChange}
@@ -100,8 +100,8 @@ export class Login extends React.Component<LoginProps, LoginState> {
               )}
             </div>
             <div className="password">
-              <label htmlFor="password">Password</label>
-              <input
+              <label htmlFor="password">Password:</label>
+              <input style={{width: "400px", marginLeft: "30px"}}
                 type="password"
                 name="password"
                 onChange={this.handleChange}

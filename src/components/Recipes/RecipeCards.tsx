@@ -51,9 +51,9 @@ class RecipeCards extends React.Component<RecipeCardsProps, RecipeCardsState> {
           <ModalHeader  className="myModalHeader" toggle={this.toggle}>{this.props.drink.strDrink}</ModalHeader>
           <ModalBody>
          <img style={{height: "200px", borderRadius: "8px"}}src={this.props.drink.strDrinkThumb} alt=""/>
-         <h4>ingredients</h4>
+         <h4>Ingredients:</h4>
            {this.props.drink.strIngredient1}
-          <h4>Directions</h4>
+          <h4>Directions:</h4>
            {this.props.drink.strInstructions}
           
 

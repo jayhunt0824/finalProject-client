@@ -84,14 +84,13 @@ class MainPage extends React.Component<MainPageProps, MainPageState> {
               onChange={this.editSearchTerm}
             />
             <button className="searchBtn" type="submit">
-              {" "}
+              {/* {" "} */}
               Search
             </button>
           </div>
         </form>
     
-       
-        
+     
 
         <RecipeCard
           // url={drinkURL}

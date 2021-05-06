@@ -72,7 +72,7 @@ toggle=()=>{
     render() { 
         return ( 
           <div>
-             <Button className="cardbtn" onClick={this.toggle}>Edit</Button>
+             <Button className="mycardeditbtn" onClick={this.toggle}>Edit</Button>
       <Modal isOpen={!this.state.modal} toggle={this.toggle} >
         <ModalHeader className="myModalHeader2" toggle={this.toggle}>Modal title</ModalHeader>
         <ModalBody style={{height: "500px"}}>

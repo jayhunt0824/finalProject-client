@@ -55,8 +55,9 @@ export class Auth extends React.Component<AuthProps, AuthState> {
             position: "relative",
             color: "rgb(234, 238, 8)",
             fontFamily: "Orbitron",
-            bottom: 700,
-            left: 140,
+            bottom: 590,
+            left: -30,
+          
           }}
         >
           {this.state.displayLogin ? (
