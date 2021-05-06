@@ -286,8 +286,9 @@ background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
 .btn-grad {background-color: #FEE140;
   width: 300px;
   background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
-  outline: white;
+  
   box-shadow: grey 5px 5px 5px;
+ 
   
 }
 
@@ -317,13 +318,36 @@ top: 30px;
 border-radius: 10px;
 }
 
+.postbtn{
+  background-color: #FEE140;
+background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
+
+
+}
+
+.subbtn{
+  background-color: #FEE140;
+background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
+}
+
 .createDiv{
   height: 900px;
   width: 800px;
+ 
 
 }
 
 h4{
   color:rgb(234, 238, 8);
  
+}
+
+.whiteLinesC{
+  width:1500px;
+  height: 1000px;
+  position: relative;
+  bottom: 300px;
+right: 300px;
+  z-index: 1;
+
 }

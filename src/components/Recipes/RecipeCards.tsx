@@ -36,9 +36,9 @@ class RecipeCards extends React.Component<RecipeCardsProps, RecipeCardsState> {
   
   render() {
     return (
-      <div>
+      <div className="fetchCardDiv">
         <Card className="fetchCard" style={{backgroundColor: "black",}}>
-          <CardImg src={this.props.drink.strDrinkThumb} alt="Card image cap" />
+          <CardImg style={{height: "400px" }} src={this.props.drink.strDrinkThumb} alt="Card image cap" />
           <CardBody style={{backgroundColor: "white", textAlign: "center"}}>
             <CardTitle tag="h5">{this.props.drink.strDrink}</CardTitle>
             <CardSubtitle tag="h6" className="mb-2 text-muted">

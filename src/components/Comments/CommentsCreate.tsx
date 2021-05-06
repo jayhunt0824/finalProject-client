@@ -1,6 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import {Button, Form, FormGroup, Label, Input, FormText} from "reactstrap";
+import whitelines from "../Home/assets/whitelines.jpg";
 
 export interface CommentsCreateProps {
     token: string;
@@ -84,14 +85,15 @@ handleSubmit =(e: any) => {
                 this.setState({ comments: e.target.value });
               }}
             />
-             <Button
+             <Button className="postbtn"
               style={{ width: 120, backgroundColor: "#f5f5f5", color: "black" }}
               type="submit"
             >
-              Submit
+              Post!
             </Button>
           </FormGroup>
           </Form>
+            {/* <img className="whiteLinesC" src={whitelines} alt=""/> */}
           <hr style={{backgroundColor: "yellow", marginTop: "90px", width: "800px"}}/>
         </div>  );
     }
