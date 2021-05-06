@@ -180,7 +180,7 @@ z-index: 20;
   border: 2px solid rgb(238, 8, 84);
   box-shadow: 10px 10px 15px rgb(238, 8, 84);
   border-radius: 10px;
-  color: rgba(255, 166, 0, 0.883);
+  color: rgb(234, 238, 8);
   font-family: "Orbitron", sans-serif;
   padding: 40px;
 }
@@ -317,3 +317,13 @@ top: 30px;
 border-radius: 10px;
 }
 
+.createDiv{
+  height: 900px;
+  width: 800px;
+
+}
+
+h4{
+  color:rgb(234, 238, 8);
+ 
+}

@@ -51,7 +51,7 @@ export class Auth extends React.Component<AuthProps, AuthState> {
           className="justify-content-md-center"
           style={{
             position: "relative",
-            color: "rgba(255, 166, 0, 0.883)",
+            color: "rgb(234, 238, 8)",
             fontFamily: "Orbitron",
             bottom: 700,
             left: 140,

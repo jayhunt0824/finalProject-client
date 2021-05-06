@@ -6,6 +6,7 @@ import { Footer } from "./components/Home/Footer";
 import MainPage, { MainPageProps } from "./components/Home/MainPage";
 import { Route, Switch, Redirect } from "react-router-dom";
 import UserRecipeIndex from "./components/User/UserRecipeIndex";
+import CommentsIndex from "./components/Comments/CommentsIndex";;
 
 
 export interface AppProps {}
@@ -88,6 +89,7 @@ class App extends React.Component<AppProps, AppState> {
           </Route>
           <Route exact path="/" component={MainPage} />
           <Route exact path="/recipe" component={UserRecipeIndex}></Route>
+          <Route exact path="/comments" component={CommentsIndex}></Route>
         </Switch>
         <Footer />
       </div>

@@ -35,6 +35,7 @@ class Sitebar extends React.Component<NavbarProps, NavbarState> {
         <NavLink to="/user"  href="/user" className="links" >  <i className="fas fa-sign-in-alt"></i>Login</NavLink> 
         
         <NavLink to="/recipe"  href="/recipe" className="links" > <i className="far fa-user"></i>Recipes </NavLink>
+        <NavLink to="/comments"  href="/comments" className="links" > <i className="far fa-comments"></i> Chat </NavLink>
 
         <NavLink  href="https://www.facebook.com" className="links" > <i className="fab fa-facebook-square"></i>Facebook </NavLink> 
         <NavLink  href="https://www.instagram.com" className="links" > <i className="fab fa-instagram"></i>Instagram </NavLink> 
