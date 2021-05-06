@@ -45,6 +45,8 @@ class MainPage extends React.Component<MainPageProps, MainPageState> {
       .catch((error) => console.log(error));
   };
 
+ 
+
   render() {
     return (
       <div>
