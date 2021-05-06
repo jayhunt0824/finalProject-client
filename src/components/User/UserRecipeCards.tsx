@@ -45,11 +45,16 @@ class UserRecipeCards extends React.Component<
       
      
       <Card className="recipeCard">
-            <CardImg top width="200px"  src={this.props.recipe.photoURL} alt="Card image cap" />
-            <CardBody>
-                <CardTitle tag="h5">{this.props.recipe.name}</CardTitle>
-                <CardSubtitle tag="h6" className="mb-2 text-muted">{this.props.recipe.categories}</CardSubtitle>
-                <CardText>{this.props.recipe.ingredients}</CardText>
+            <CardImg className="myCardImg" style={{height: "290px", width: "290px"}}   src={this.props.recipe.photoURL} alt="Card image cap" />
+            <CardBody className="userRecipeCardBody">
+            <div className="cardWhiteDiv"></div>
+            
+                <CardTitle className="myCardTitle" tag="h5">{this.props.recipe.name}</CardTitle>
+                <CardSubtitle id="myCardSubT" tag="h6" className="mb-2 text-muted">{this.props.recipe.categories}</CardSubtitle>
+                <CardSubtitle id="myCardSubI" tag="h6" className="mb-2 text-muted">Ingredients:</CardSubtitle>
+                <CardText className="myCardText">{this.props.recipe.ingredients}</CardText>
+                <CardSubtitle id="myCardSubD" tag="h6" className="mb-2 text-muted">Directions:</CardSubtitle>
+                <CardText className="myCardDir">{this.props.recipe.directions}</CardText>
                 <UserRecipeEdit sessionToken={this.props.sessionToken} fetchRecipes={this.props.fetchRecipes} editRecipe={this.state.editRecipe} id={this.props.recipe.id}  />
                 <Button className="cardbtn" onClick={()=>this.props.deleteRecipe(this.props.recipe.id)}>Delete</Button>
             </CardBody>

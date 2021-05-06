@@ -77,7 +77,7 @@ class MainPage extends React.Component<MainPageProps, MainPageState> {
           }}
         >
           <div className="searchBarDiv">
-            <Input style={{borderRadius: "15px"}} className="searchBar"
+            <Input  className="searchBar"
               type="text"
               placeholder="Search Here"
               value={this.state.drinks}

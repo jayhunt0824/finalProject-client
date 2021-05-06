@@ -222,15 +222,6 @@ left: -240px;
   background-color: rgb(238, 8, 84);
 }
 
-.recipeCard{
-  height: 300px;
-  width: 750px;
-  margin-bottom: 20px;
-  position: relative;
-  top: 50px;
-  right: 40px
-  
-}
 
 .tris{
   position: relative;
@@ -351,3 +342,92 @@ right: 300px;
   z-index: 1;
 
 }
+
+
+
+.cardWhiteDiv{
+  height: 300px;
+  width: 750px;
+z-index: 1;
+  background-color: white;
+  opacity: 60%;
+  position: relative;
+  bottom: 60px;
+  right: 320px;
+
+}
+
+.userRecipeCardBody{
+  position: relative;
+  bottom: 250px;
+  left: 300px;
+  
+}
+
+.recipeCard{
+  height: 300px;
+  width: 750px;
+  margin-bottom: 20px;
+  position: relative;
+  top: 50px;
+  right: 40px;
+  
+  background-color: #FEE140;
+  background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
+  
+  
+}
+
+.myCardImg{
+  z-index: 2;
+  position: relative;
+  left: 450px;
+  top: 5px;
+}
+
+.myCardTitle{
+  position: relative;
+  top: -350px;
+ right: 300px;
+  font-size: x-large;
+  z-index: 4;
+}
+
+#myCardSubT{
+  position: relative;
+  bottom: 350px;
+  right: 300px;
+  z-index: 4;
+
+}
+
+#myCardSubI{
+ position: relative;
+ bottom: 330px;
+ z-index: 4;
+ right: 300px;
+
+}
+
+.myCardText{
+  position: relative;
+  bottom: 330px;
+  z-index: 4;
+  right: 300px;
+}
+
+#myCardSubD{
+  position: relative;
+  bottom: 330px;
+  z-index: 4;
+  right: 300px;
+ 
+ }
+
+ .myCardDir{
+   position: relative;
+   bottom: 330px;
+   z-index: 4;
+   right: 300px;
+   
+ }

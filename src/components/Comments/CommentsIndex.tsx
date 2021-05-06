@@ -2,7 +2,6 @@ import * as React from "react";
 import {Container, Row, Col, Button} from 'reactstrap';
 import CommentsCreate from "./CommentsCreate";
 import CommentsCards from "./CommentsCards"
-import CommentsEdit from "./CommentsEdit";
 import {IComment} from "./Interface";
 
 
@@ -76,7 +75,7 @@ class CommentsIndex extends React.Component<CommentsIndexProps, CommentsIndexSta
               </Col>
               <Col md="9">
       
-                  {this.state.comments.length>0 ? (this.state.comments.map((comment: IComment, index: number)=>(<CommentsCards comment={comment} deleteComment={this.deleteComment} sessionToken={this.props.sessionToken} fetchComments={this.fetchComments} />))): null}
+                  {this.state.comments.length> 0 ? (this.state.comments.map((comment: IComment, index: number)=>(<CommentsCards comment={comment} deleteComment={this.deleteComment} sessionToken={this.props.sessionToken} fetchComments={this.fetchComments} />))): null}
               
               </Col>
               

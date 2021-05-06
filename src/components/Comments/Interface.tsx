@@ -15,6 +15,6 @@
         rating: number;
         createdAt: Date;
         updatedAt: Date;
-        recipeId: number;
+        photoURL: string;
        
     }
