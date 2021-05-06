@@ -38,7 +38,7 @@ class RecipeCards extends React.Component<RecipeCardsProps, RecipeCardsState> {
     return (
       <div className="fetchCardDiv">
         <Card className="fetchCard" style={{backgroundColor: "black",}}>
-          <CardImg style={{height: "400px" }} src={this.props.drink.strDrinkThumb} alt="Card image cap" />
+          <CardImg style={{height: "370px"}} src={this.props.drink.strDrinkThumb} alt="Card image cap" />
           <CardBody style={{backgroundColor: "white", textAlign: "center"}}>
            
             <CardTitle tag="h5">{this.props.drink.strDrink}</CardTitle>
@@ -50,7 +50,9 @@ class RecipeCards extends React.Component<RecipeCardsProps, RecipeCardsState> {
             <Modal  className="drinkModal" isOpen={this.state.modal} toggle={this.toggle} >
           <ModalHeader  className="myModalHeader" toggle={this.toggle}>{this.props.drink.strDrink}</ModalHeader>
           <ModalBody>
-         <img style={{height: "100px", borderRadius: "8px"}}src={this.props.drink.strDrinkThumb} alt=""/>
+         <img style={{height: "200px", borderRadius: "8px"}}src={this.props.drink.strDrinkThumb} alt=""/>
+         <h4>ingredients</h4>
+           {this.props.drink.strIngredient1}
           <h4>Directions</h4>
            {this.props.drink.strInstructions}
           

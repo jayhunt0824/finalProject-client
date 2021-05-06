@@ -9,19 +9,31 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
-export interface NavbarProps {}
+export interface NavbarProps {
+ 
+  
+}
 
 export interface NavbarState {
   collapsed: boolean;
+  sessionToken: string;
+  id: string;
 }
 
 class Sitebar extends React.Component<NavbarProps, NavbarState> {
   constructor(props: NavbarProps) {
     super(props);
-    this.state = { collapsed: true };
+    this.state = { collapsed: true, sessionToken: '', id: '' };
   }
 
   toggleSitebar = () => this.setState({ collapsed: !this.state.collapsed });
+
+  clearToken = () => {
+    localStorage.clear();
+    this.setState({sessionToken:''});
+    this.setState({id: ''});
+    console.log("Logged out");
+};
 
   render() {
     return (
@@ -40,6 +52,8 @@ class Sitebar extends React.Component<NavbarProps, NavbarState> {
         <NavLink  href="https://www.facebook.com" className="links" > <i className="fab fa-facebook-square"></i>Facebook </NavLink> 
         <NavLink  href="https://www.instagram.com" className="links" > <i className="fab fa-instagram"></i>Instagram </NavLink> 
         <NavLink  href="https://www.tiktok.com" className="links" > <i className="fab fa-tiktok"></i>TikTok </NavLink> 
+        <NavLink to="/"  href="/" onClick={this.clearToken} className="links" >  <i className="fas fa-sign-out-alt"></i>Logout</NavLink> 
+     
 
         </NavItem>
         

@@ -73,7 +73,7 @@ handleSubmit =(e: any) => {
 
     render() { 
         return ( <div className="createDiv">
-           <h4 >What's on your mind?</h4>
+           <h4 className="commentsH">What's on your mind?</h4>
            <Form style={{color: "rgb(234, 238, 8)" }}onSubmit={this.handleSubmit}>
           <FormGroup>
             <Label htmlFor="comment"></Label>

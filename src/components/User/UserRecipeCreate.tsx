@@ -121,9 +121,9 @@ export class UserRecipeCreate extends React.Component<
     // console.log(this.props.token)
     return (
       <div className="createRecipe">
-        <h4
+        <h4 className="createRecipeH"
           id="UserRecipeCreateFont"
-          style={{ fontSize: 55, textAlign: "center",  fontFamily: "Bebas Neue", color: " rgb(238, 8, 84)" }}
+          style={{ fontSize: 55, textAlign: "center",  fontFamily: "Bebas Neue", color: "rgb(234, 238, 8)" }}
         >
           Create Recipe
         </h4>
