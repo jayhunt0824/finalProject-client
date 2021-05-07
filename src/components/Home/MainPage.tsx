@@ -65,7 +65,7 @@ class MainPage extends React.Component<MainPageProps, MainPageState> {
             <img className="tris" src={mainBck} alt=""  />
             {/* <img className="img" src={blackberrycocktail} alt="" height="340" /> */}
             <div className="blackDiv"></div>
-        <h1 className="logo">SWIG</h1>
+        <h1 className="logo">Mixipedia</h1>
 
           </Container>
         </Jumbotron>

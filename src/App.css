@@ -265,15 +265,17 @@ bottom: 890px;
 }
 
 .logo{
-  font-size: 200px;
+  font-size: 160px;
+  font-style: italic;
   color: white;
   z-index: 5;
-  bottom: 1800px;
-  left: -160px;
+  bottom: 1750px;
+  left: 120px;
   /* opacity: 90%; */
   
-  text-shadow: 10px 10px 20px black;
+  text-shadow: 5px 5px 10px black;
   position: relative;
+  font-family: 'Satisfy', cursive;
  
 
   

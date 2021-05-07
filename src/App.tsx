@@ -55,6 +55,15 @@ class App extends React.Component<AppProps, AppState> {
     })
   }
   
+  // protectedViews(){
+  //   if(this.state.role === "Admin" && this.state.token) {
+  //     return <Redirect to="/" />
+  //   } else if (this.state.role === "User" && this.state.token){
+  //     return <Redirect to="/" />
+  //   } else {
+  //     return <Auth updateToken={this.updateToken}/>
+  //   }
+  // }
   
   //   clearToken =() => {
   //   localStorage.clear();
