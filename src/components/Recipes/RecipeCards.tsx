@@ -48,14 +48,18 @@ class RecipeCards extends React.Component<RecipeCardsProps, RecipeCardsState> {
             {/* <CardText>{this.props.drink.strInstructions}</CardText> */}
             <Button className="btn-grad" onClick={this.toggle}>View</Button>
             <Modal  className="drinkModal" isOpen={this.state.modal} toggle={this.toggle} >
-          <ModalHeader  className="myModalHeader" toggle={this.toggle}>{this.props.drink.strDrink}</ModalHeader>
+          <ModalHeader className="fetchModalHeader" toggle={this.toggle}></ModalHeader>
           <ModalBody>
          <img style={{height: "200px", borderRadius: "8px"}}src={this.props.drink.strDrinkThumb} alt=""/>
-         <h4>Ingredients:</h4>
+         <h3 className="fetchName">{this.props.drink.strDrink}</h3>
+         <h4 className="ingredientsH">Ingredients:</h4>
+         <div className="ingredients">
            {this.props.drink.strIngredient1}
+           </div>
+           <div className="directions">
           <h4>Directions:</h4>
            {this.props.drink.strInstructions}
-          
+           </div>
 
           </ModalBody>
           <ModalFooter className="myModalFooter">

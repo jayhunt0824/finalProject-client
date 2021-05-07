@@ -303,9 +303,26 @@ background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
   background-color: #FEE140;
 background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
 
+
 }
 
+.fetchModalHeader{
+  background-color: #FEE140;
+background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
+text-align: center;
+position:relative;
+justify-content: center;
 
+
+}
+
+.fetchName{
+  position: relative;
+  left: 220px;
+  bottom: 200px;
+  font-family: "Orbitron", sans-serif;
+
+}
  
 
 .btn-grad {background-color: #FEE140;
@@ -554,4 +571,21 @@ z-index: 1;
   z-index: 3;
   position: relative;
   bottom: 200px;
+}
+
+.ingredientsH{
+  position: relative;
+  bottom: 200px;
+  left: 220px;
+}
+
+.ingredients{
+  position: relative;
+  bottom: 200px;
+  left: 220px;
+}
+
+.directions{
+  position: relative;
+  bottom: 75px;
 }
