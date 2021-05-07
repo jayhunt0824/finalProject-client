@@ -26,32 +26,32 @@ export class Footer extends Component {
     return (
       <div>
         <div className="footer">
-          <div className="icons">
-            <a href="/"
+          <span className="icons"  >
+            <a href="/" style={{}}
               className="home" target="blank">
-              <FontAwesomeIcon icon={faHome} size="2x" color="black" />
+              <FontAwesomeIcon style={{}} icon={faHome} size="3x" color="black" />
             </a>
             <a href="/user"
               className="home" target="blank">
-              <FontAwesomeIcon icon={faUser} size="2x" color="black" />
+              <FontAwesomeIcon icon={faUser} size="3x" color="black" />
             </a>
             <a href="/comments"
               className="home" target="blank">
-              <FontAwesomeIcon icon={faComments} size="2x" color="black" />
+              <FontAwesomeIcon icon={faComments} size="3x" color="black" />
             </a>
             <a href="https://www.facebook.com"
               className="facebook social" target="blank">
-              <FontAwesomeIcon icon={faFacebook} size="2x" color="black" />
+              <FontAwesomeIcon icon={faFacebook} size="3x" color="black" />
             </a>
             <a href="https://www.instagram.com"
               className="instagram social" target="blank">
-              <FontAwesomeIcon icon={faInstagram} size="2x" color="black" />
+              <FontAwesomeIcon icon={faInstagram} size="3x" color="black" />
             </a>
             <a href="https://www.tiktok.com"
               className="tiktok social" target="blank">
-              <FontAwesomeIcon icon={faTiktok} size="2x" color="black" />
+              <FontAwesomeIcon icon={faTiktok} size="3x" color="black" />
             </a>
-          </div>
+          </span>
           <div style={{ marginTop: "160px" }} className='footer-copyright text-center ml-auto py-3'>
             &copy; 2021 - Jennifer Hunt - Red Badge
         </div>

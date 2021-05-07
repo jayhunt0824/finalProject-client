@@ -75,10 +75,10 @@ toggle=()=>{
              <Button className="mycardeditbtn" onClick={this.toggle}>Edit</Button>
       <Modal isOpen={!this.state.modal} toggle={this.toggle} >
         <ModalHeader className="myModalHeader2" toggle={this.toggle}>Modal title</ModalHeader>
-        <ModalBody style={{height: "500px"}}>
+        <ModalBody className="myModalBody" style={{height: "500px"}}>
         <Form onSubmit={(event)=>this.recipeUpdate(event)} >
             <FormGroup>
-              <Label htmlFor="Name"> Edit Name:</Label>
+              <Label  htmlFor="Name"> Edit Name:</Label>
               <Input
                 name="result"
                 value={this.state.editName}
@@ -134,10 +134,10 @@ toggle=()=>{
                     <Button size= 'sm' color='outline-danger' disabled={loading} disabled={loading} onClick={deleteImg}>Delete image</Button>
                 </FormGroup> */}
             
-        <Button onClick={this.toggle} type="submit">Update the Recipe!</Button>
+        <Button  className="updaterecipebtn" onClick={this.toggle} type="submit">Update the Recipe!</Button>
           </Form>
         </ModalBody>
-        <ModalFooter>
+        <ModalFooter style={{backgroundColor: "rgb(238, 8, 84)"}}>
           {/* <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
           <Button color="secondary" onClick={this.toggle}>Cancel</Button> */}
         </ModalFooter>

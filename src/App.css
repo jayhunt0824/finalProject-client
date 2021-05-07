@@ -227,7 +227,7 @@ z-index: 20;
   margin: auto;
   padding: 30px;
   position: relative;
-  top: -650px;
+  top: -800px;
   z-index: 20;
 }
 
@@ -306,6 +306,12 @@ background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
 
 }
 
+/* .myModalBody{
+  background-color: #FEE140;
+  background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
+  opacity: 30%;
+} */
+
 .fetchModalHeader{
   background-color: #FEE140;
 background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
@@ -339,6 +345,12 @@ justify-content: center;
 background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
 }
 
+.updaterecipebtn{
+  background-color: #FEE140;
+  background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
+position: relative;
+left: 140px;
+}
 /* 
 .fetchCard{
   box-shadow: 10px 10px 15px rgb(238, 8, 84);
@@ -449,17 +461,19 @@ z-index: 1;
 
 .myCardTitle{
   position: relative;
-  top: -450px;
+  top: -550px;
  right: 300px;
   font-size: x-large;
   z-index: 4;
+  /* font-family: "Orbitron", sans-serif; */
 }
 
 #myCardSubT{
   position: relative;
-  bottom: 450px;
+  bottom: 550px;
   right: 300px;
   z-index: 4;
+  font-size: larger;
 
 }
 
@@ -504,7 +518,7 @@ z-index: 1;
   background-color: #FEE140;
   background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
   position: relative;
-  bottom: 330px;
+  bottom: 380px;
 left: -90px;
   z-index: 5;
   color: white;
@@ -515,7 +529,7 @@ left: -90px;
  background-color: #FEE140;
  background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
  position: relative;
- bottom: 292px;
+ bottom: 342px;
 left: -250px;
  z-index: 5;
  color: white;
@@ -565,6 +579,7 @@ z-index: 1;
   z-index: 4;
   bottom: 300px;
   width: 150px;
+  left: 28px;
 }
 
 #postCom{
