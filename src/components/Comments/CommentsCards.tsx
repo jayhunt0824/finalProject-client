@@ -26,7 +26,7 @@ class CommentsCards extends React.Component<CommentsCardsProps, CommentsCardsSta
       
      
             <Card className="commentCard">
-                  <CardImg   src={this.props.comment.photoURL} alt="Card image cap" />
+                  <CardImg style={{height: "200px", width: "300px"}}  src={this.props.comment.photoURL}  />
                   <CardBody>
                   <div className="postWhiteDiv"></div>
                       {/* <CardTitle tag="h5">{this.props.comment.id}</CardTitle> */}

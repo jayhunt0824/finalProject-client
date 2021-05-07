@@ -45,7 +45,7 @@ class App extends React.Component<AppProps, AppState> {
     localStorage.setItem("token", token);
     this.setState({ sessionToken: token });
     console.log(token);
-    this.updateRole(role);
+    // this.updateRole(role);
   };
 
   updateRole =(role: string) => {
@@ -91,6 +91,7 @@ class App extends React.Component<AppProps, AppState> {
             ) : (
               <Auth
                 updateToken={this.updateToken}
+                updateRole={this.updateRole}
                 // updateUsername={this.updateUsername}
               />
             )}

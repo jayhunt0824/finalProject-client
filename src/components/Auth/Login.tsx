@@ -2,6 +2,7 @@ import React from "react";
 
 interface LoginProps {
   updateToken: Function;
+  updateRole: Function;
 }
 
 interface LoginState {
@@ -71,6 +72,7 @@ export class Login extends React.Component<LoginProps, LoginState> {
         .then((response) => response.json())
         .then((data) => {
           this.props.updateToken(data.sessionToken);
+          this.props.updateRole(data.user.role)
           console.log(data);
         });
 

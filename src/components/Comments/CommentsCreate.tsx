@@ -15,15 +15,38 @@ export interface CommentsCreateState {
     recipeId: number;
     comments: string; 
     photoURL: string;
+    loading: boolean,
 }
  
 class CommentsCreate extends React.Component<CommentsCreateProps, CommentsCreateState> {
     constructor(props: CommentsCreateProps) {
         super(props);
-        this.state = { id: 0, recipeId: 0, comments: '', photoURL: ''  };
+        this.state = { id: 0, recipeId: 0, comments: '', photoURL: '', loading: false };
     }
 
     //uploadimage function
+    uploadImage = async (e: any) => {
+        const data = new FormData();
+        const files = e.target.files;
+        data.append("file", files[0]);
+        data.append("upload_preset", "artisan-goods-cloudinary");
+        // this.setState({ loading: true });
+        const res = await fetch(
+          "https://api.cloudinary.com/v1_1/natescloudinary/image/upload",
+          {
+            method: "POST",
+            body: data,
+          }
+        );
+        const file = await res.json();
+    
+        this.setState({ photoURL: file.secure_url });
+        this.setState({ loading: false });
+    
+        // setPhotoURL(file.secure_url);
+        // setLoading(false);
+      };
+    
 
 handleSubmit =(e: any) => {
     e.preventDefault();
@@ -57,17 +80,15 @@ handleSubmit =(e: any) => {
     })
 };
 
-// changeBtn = (e: any) => {
-//     e.target.style.fontSize = "larger";
-//   };
+changeBtn = (e: any) => {
+    e.target.style.fontSize = "larger";
+  };
 
-//   resetBtn = (e: any) => {
-//     e.target.style.fontSize = "initial";
-//   };
+  resetBtn = (e: any) => {
+    e.target.style.fontSize = "initial";
+  };
 
-//   handleChangeCategory = (e: any) => {
-//     this.setState({ categories: e.target.value });
-//   };
+
 
 
 
@@ -92,9 +113,27 @@ handleSubmit =(e: any) => {
               Post!
             </Button>
           </FormGroup>
+          <FormGroup>
+           
+            <Input className="choosefilebtn" style={{position: "relative", bottom: "50px", left: "140px"}} type="file" onChange={this.uploadImage} />
+            {this.state.loading ? (
+              <h6>Loading...</h6>
+            ) : (
+              <img src={this.state.photoURL} style={{ width: "120px" }} />
+            )}
+            <br />
+            <Button style={{position: "relative", bottom: "106px", left: "370px"}}
+              size="sm"
+              color="outline-danger"
+              disabled={this.state.loading || this.state.photoURL === ""}
+              //   onClick={this.deleteImg}
+            >
+              Delete image
+            </Button>
+          </FormGroup>
           </Form>
             {/* <img className="whiteLinesC" src={whitelines} alt=""/> */}
-          <hr style={{backgroundColor: "yellow", marginTop: "90px", width: "800px"}}/>
+          <hr style={{backgroundColor: "yellow", marginTop: "-50px", width: "800px"}}/>
         </div>  );
     }
 }

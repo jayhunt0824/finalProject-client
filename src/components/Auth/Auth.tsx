@@ -9,6 +9,7 @@ import drinklogo from "../Home/assets/nobackground.png";
 
 export interface AuthProps {
   updateToken: Function;
+  updateRole: Function;
   // updateUsername: Function;
 }
 
@@ -40,11 +41,13 @@ export class Auth extends React.Component<AuthProps, AuthState> {
           {this.state.displayLogin ? (
             <Login
               updateToken={this.props.updateToken}
+              updateRole={this.props.updateRole}
               // updateUsername={this.props.updateUsername}
             />
           ) : (
             <Signup
               updateToken={this.props.updateToken}
+              updateRole={this.props.updateToken}
               // updateUsername={this.props.updateUsername}
             />
           )}

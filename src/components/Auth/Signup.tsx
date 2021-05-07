@@ -2,6 +2,7 @@ import React from "react";
 
 interface SignUpProps {
   updateToken: Function;
+  updateRole: Function;
 }
 
 interface SignUpState {
@@ -71,7 +72,9 @@ export class Signup extends React.Component<SignUpProps, SignUpState> {
         .then((response) => response.json())
         .then((data) => {
           this.props.updateToken(data.sessionToken); //may be token
+          this.props.updateRole(data.user.role)
           console.log(data);
+          console.log(data.user.role);
         });
       console.log("Registering can be done");
     } else {
