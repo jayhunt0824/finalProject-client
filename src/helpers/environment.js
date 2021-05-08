@@ -6,8 +6,8 @@ switch (window.location.hostname) {
     APIURL = 'https://localhost:3000';
     break;
 
-    case 'mixipedia-app-client.herokuapp.com':
-    APIURL ='https://mixipedia-app.herokuapp.com/'
+    case 'fast-reaches-58952.herokuapp.com':
+    APIURL ='https://mixipedia-app.herokuapp.com'
 }
 
 export default APIURL;
