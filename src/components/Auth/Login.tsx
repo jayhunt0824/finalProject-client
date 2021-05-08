@@ -60,7 +60,7 @@ export class Login extends React.Component<LoginProps, LoginState> {
       (val) => val.length > 0 && (validity = false)
     );
     if (validity === true) {
-      fetch(`&{APIURL}/user/login`, {
+      fetch(`${APIURL}/user/login`, {
         method: "POST",
         body: JSON.stringify({
           username: this.state.username,
