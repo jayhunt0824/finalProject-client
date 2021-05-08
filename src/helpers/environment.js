@@ -7,7 +7,7 @@ switch (window.location.hostname) {
     break;
 
     case 'fast-reaches-58952.herokuapp.com':
-    APIURL ='https://mixipedia-app.herokuapp.com'
+    APIURL ='https://redbadge-app.herokuapp.com'
 }
 
 export default APIURL;
