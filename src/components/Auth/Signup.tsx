@@ -1,4 +1,5 @@
 import React from "react";
+import APIURL from '../../helpers/environment';
 
 interface SignUpProps {
   updateToken: Function;
@@ -59,7 +60,7 @@ export class Signup extends React.Component<SignUpProps, SignUpState> {
       (val) => val.length > 0 && (validity = false)
     );
     if (validity === true) {
-      fetch("http://localhost:3000/user/signup", {
+      fetch(`${APIURL}/user/signup`, {
         method: "POST",
         body: JSON.stringify({
           username: this.state.username,

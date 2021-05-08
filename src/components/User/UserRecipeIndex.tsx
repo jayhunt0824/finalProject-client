@@ -4,6 +4,7 @@ import UserRecipeCreate from "./UserRecipeCreate";
 import UserRecipeCards from "./UserRecipeCards"
 import UserRecipeEdit from "./UserRecipeEdit";
 import {IRecipe} from "./Interface";
+import APIURL from "../../helpers/environment";
 
 
 
@@ -45,7 +46,7 @@ class UserRecipeIndex extends React.Component<UserRecipeIndexProps, UserRecipeIn
         let token = this.props.sessionToken ? this.props.sessionToken: localStorage.getItem("token");
 
 
-        fetch("http://localhost:3000/recipe/get", {
+        fetch(`${APIURL}/recipe/get`, {
           method: "GET",
           headers: new Headers({
             "Content-Type": "application/json",
@@ -63,7 +64,7 @@ class UserRecipeIndex extends React.Component<UserRecipeIndexProps, UserRecipeIn
         let token = this.props.sessionToken ? this.props.sessionToken: localStorage.getItem("token");
 
 
-        fetch(`http://localhost:3000/recipe/delete/${id}`, {
+        fetch(`${APIURL}/recipe/delete/${id}`, {
           method: "DELETE",
           headers: new Headers({
             "Content-Type": "application/json",

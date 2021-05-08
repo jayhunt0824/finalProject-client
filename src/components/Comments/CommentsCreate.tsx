@@ -1,6 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import {Button, Form, FormGroup, Label, Input, FormText} from "reactstrap";
+import APIURL from "../../helpers/environment";
 
 // import 'emoji-mart/css/emoji-mart.css'
 // import { Picker } from 'emoji-mart';
@@ -57,7 +58,7 @@ handleSubmit =(e: any) => {
 
     console.log(
         this.state.id, this.state.recipeId, this.state.comments, this.state.photoURL);
-    fetch(`http://localhost:3000/comments/create`, {
+    fetch(`${APIURL}/comments/create`, {
         method: "POST", 
         body: JSON.stringify({
             id: this.state.id, 

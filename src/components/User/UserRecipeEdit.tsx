@@ -11,6 +11,7 @@ import {
   ModalBody,
 } from "reactstrap";
 // import {IRecipe} from "./Interface";
+import APIURL from "../../helpers/environment";
 
 
 export interface UserRecipeEditProps {
@@ -44,7 +45,7 @@ class UserRecipeEdit extends React.Component<UserRecipeEditProps, UserRecipeEdit
     let token = this.props.sessionToken ? this.props.sessionToken: localStorage.getItem("token");
     // console.log("recipeUpdate", this.props.id)
     event.preventDefault();
-    fetch(`http://localhost:3000/recipe/update/${this.props.recipe.id}`, {
+    fetch(`${APIURL}/recipe/update/${this.props.recipe.id}`, {
       method: "PUT",
       body: JSON.stringify({
         name: this.state.editName, ingredients: this.state.editIng, directions: this.state.editDir, categories: this.state.editCat,

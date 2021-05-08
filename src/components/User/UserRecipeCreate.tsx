@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
+import APIURL from '../../helpers/environment';
 
 export interface UserRecipeCreateProps {
   token: string;
@@ -67,7 +68,7 @@ export class UserRecipeCreate extends React.Component<
       this.state.categories, 
       this.state.id,
     );
-    fetch(`http://localhost:3000/recipe/create`, {
+    fetch(`${APIURL}/recipe/create`, {
       method: "POST",
       body: JSON.stringify({
         name: this.state.name,
