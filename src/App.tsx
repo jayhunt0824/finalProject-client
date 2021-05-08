@@ -13,7 +13,7 @@ export interface AppProps {}
 
 export interface AppState {
   sessionToken: string;
-  role: string
+  role: string;
 }
 
 class App extends React.Component<AppProps, AppState> {
