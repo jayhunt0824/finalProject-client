@@ -140,7 +140,8 @@ z-index: 20;
 .footer {
   background-color: rgb(234, 238, 8) ;
   height: 500px;
-  padding: 200px;
+  padding: 300px;
+  /* margin-top: 500px; */
 
   text-align: center;
 }
@@ -584,6 +585,8 @@ z-index: 1;
   left: 28px;
 }
 
+
+
 #postCom{
   z-index: 3;
   position: relative;
@@ -613,3 +616,4 @@ z-index: 1;
 .postimg{
   z-index: 5;
 }
+

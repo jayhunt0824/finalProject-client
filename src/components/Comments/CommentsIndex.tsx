@@ -67,7 +67,7 @@ class CommentsIndex extends React.Component<CommentsIndexProps, CommentsIndexSta
 
 
     render() { 
-        return ( <Container>
+        return ( <Container id="postcontainer">
               
             <Row>
               <Col md="3">

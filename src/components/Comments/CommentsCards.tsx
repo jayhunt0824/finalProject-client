@@ -22,7 +22,7 @@ class CommentsCards extends React.Component<CommentsCardsProps, CommentsCardsSta
     }
     render() { 
         console.log(this.props.comment)
-        return ( <div>
+        return ( <div >
       
      
             <Card className="commentCard">

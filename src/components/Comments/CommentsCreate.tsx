@@ -1,7 +1,9 @@
 import React from 'react';
 import { Component } from 'react';
 import {Button, Form, FormGroup, Label, Input, FormText} from "reactstrap";
-import whitelines from "../Home/assets/whitelines.jpg";
+
+// import 'emoji-mart/css/emoji-mart.css'
+// import { Picker } from 'emoji-mart';
 
 export interface CommentsCreateProps {
     token: string;
@@ -16,12 +18,13 @@ export interface CommentsCreateState {
     comments: string; 
     photoURL: string;
     loading: boolean,
+    text: string;
 }
  
 class CommentsCreate extends React.Component<CommentsCreateProps, CommentsCreateState> {
     constructor(props: CommentsCreateProps) {
         super(props);
-        this.state = { id: 0, recipeId: 0, comments: '', photoURL: '', loading: false };
+        this.state = { id: 0, recipeId: 0, comments: '', photoURL: '', loading: false, text: '' };
     }
 
     //uploadimage function
@@ -88,9 +91,20 @@ changeBtn = (e: any) => {
     e.target.style.fontSize = "initial";
   };
 
+//   handleChange = (e: any) => {
+//     this.setState({ text: e.target.value })
+//     console.log(e)
+//   }
 
-
-
+//   addEmoji = (e: any) => {
+//   let sym = e.unified.split('-')
+//   let codesArray: any = []
+//   sym.forEach((el:any) => codesArray.push('0x' + el))
+//   let emoji = String.fromCodePoint(...codesArray)
+//   this.setState({
+//      text: this.state.text + emoji
+//   })
+// }
 
     render() { 
         return ( <div className="createDiv">
@@ -112,6 +126,9 @@ changeBtn = (e: any) => {
             >
               Post!
             </Button>
+            <span>
+   {/* <Picker onSelect={this.addEmoji} /> */}
+</span>
           </FormGroup>
           <FormGroup>
            
