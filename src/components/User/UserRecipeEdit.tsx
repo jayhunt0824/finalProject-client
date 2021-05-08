@@ -10,6 +10,7 @@ import {
   ModalHeader,
   ModalBody,
 } from "reactstrap";
+// import {IRecipe} from "./Interface";
 
 
 export interface UserRecipeEditProps {
@@ -17,9 +18,8 @@ export interface UserRecipeEditProps {
     fetchRecipes: Function;
     // updateOff: Function;
     editRecipe: any;
-    id: number ;
+    recipe: any ;
   
-   
 }
  
 export interface UserRecipeEditState {
@@ -36,15 +36,15 @@ export interface UserRecipeEditState {
 class UserRecipeEdit extends React.Component<UserRecipeEditProps, UserRecipeEditState> {
     constructor(props: UserRecipeEditProps) {
         super(props);
-        this.state = { editName: "", editIng: "", editDir: "", editCat: ""  , modal: true };
+        this.state = { editName: this.props.recipe.name, editIng:  this.props.recipe.ingredients, editDir: this.props.recipe.directions, editCat: this.props.recipe.category  , modal: true };
     }
 
     
   recipeUpdate = (event: any) => {
     let token = this.props.sessionToken ? this.props.sessionToken: localStorage.getItem("token");
-    console.log("recipeUpdate", this.props.id)
+    // console.log("recipeUpdate", this.props.id)
     event.preventDefault();
-    fetch(`http://localhost:3000/recipe/update/${this.props.id}`, {
+    fetch(`http://localhost:3000/recipe/update/${this.props.recipe.id}`, {
       method: "PUT",
       body: JSON.stringify({
         name: this.state.editName, ingredients: this.state.editIng, directions: this.state.editDir, categories: this.state.editCat,

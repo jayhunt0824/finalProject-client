@@ -420,7 +420,7 @@ right: 300px;
 
 
 .cardWhiteDiv{
-  height: 500px;
+  height: 400px;
   width: 750px;
 z-index: 1;
   background-color: white;
@@ -439,7 +439,7 @@ z-index: 1;
 }
 
 .recipeCard{
-  height: 500px;
+  height: 400px;
   width: 750px;
   margin-bottom: 20px;
   position: relative;
@@ -461,7 +461,7 @@ z-index: 1;
 
 .myCardTitle{
   position: relative;
-  top: -550px;
+  top: -450px;
  right: 300px;
   font-size: x-large;
   z-index: 4;
@@ -470,7 +470,7 @@ z-index: 1;
 
 #myCardSubT{
   position: relative;
-  bottom: 550px;
+  bottom: 450px;
   right: 300px;
   z-index: 4;
   font-size: larger;
@@ -479,7 +479,7 @@ z-index: 1;
 
 #myCardSubI{
  position: relative;
- bottom: 430px;
+ bottom: 440px;
  z-index: 4;
  right: 300px;
 
@@ -487,9 +487,10 @@ z-index: 1;
 
 .myCardText{
   position: relative;
-  bottom: 430px;
+  bottom: 440px;
   z-index: 4;
   right: 300px;
+  width: 400px;
 }
 
 #myCardSubD{
@@ -505,6 +506,7 @@ z-index: 1;
    bottom: 430px;
    z-index: 4;
    right: 300px;
+   width: 400px;
    
    
  }
@@ -518,7 +520,7 @@ z-index: 1;
   background-color: #FEE140;
   background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
   position: relative;
-  bottom: 380px;
+  bottom: 418px;
 left: -90px;
   z-index: 5;
   color: white;
@@ -529,7 +531,7 @@ left: -90px;
  background-color: #FEE140;
  background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
  position: relative;
- bottom: 342px;
+ bottom: 380px;
 left: -250px;
  z-index: 5;
  color: white;
@@ -565,7 +567,7 @@ z-index: 1;
   background-color: #FEE140;
   background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
   position: relative;
-  bottom: 340px;
+  bottom: 388px;
   left: 200px;
   z-index: 4;
   width: 150px;
@@ -577,7 +579,7 @@ z-index: 1;
   background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
   position: relative;
   z-index: 4;
-  bottom: 300px;
+  bottom: 350px;
   width: 150px;
   left: 28px;
 }
@@ -586,6 +588,9 @@ z-index: 1;
   z-index: 3;
   position: relative;
   bottom: 370px;
+  left: 300px;
+  width: 350px;
+  text-align: left;
 }
 
 .ingredientsH{
@@ -605,3 +610,6 @@ z-index: 1;
   bottom: 75px;
 }
 
+.postimg{
+  z-index: 5;
+}
