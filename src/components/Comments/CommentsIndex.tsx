@@ -3,7 +3,7 @@ import {Container, Row, Col, Button} from 'reactstrap';
 import CommentsCreate from "./CommentsCreate";
 import CommentsCards from "./CommentsCards"
 import {IComment} from "./Interface";
-import APIURL from "../../helpers/environment"
+import APIURL from "../../helpers/environment";
 
 
 export interface CommentsIndexProps {
@@ -36,7 +36,7 @@ class CommentsIndex extends React.Component<CommentsIndexProps, CommentsIndexSta
         let token = this.props.sessionToken ? this.props.sessionToken: localStorage.getItem("token");
 
 
-        fetch(`${APIURL}:3000/comments/get`, {
+        fetch(`${APIURL}/comments/get`, {
           method: "GET",
           headers: new Headers({
             "Content-Type": "application/json",

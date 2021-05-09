@@ -46,8 +46,8 @@ class Sitebar extends React.Component<NavbarProps, NavbarState> {
        
       <NavItem>
         <NavLink to="/"  href="/" className="links" >  <i className="fas fa-home"></i>Home</NavLink>
-       <NavItem>{localStorage.getItem('sessionToken') ? <></> : <NavLink to="/user"  href="/user" className="links" >  <i className="fas fa-sign-in-alt"></i>Login</NavLink> }
-        
+       <NavItem>
+        <NavLink to="/user"  href="/user" className="links" >  <i className="fas fa-sign-in-alt"></i>Login</NavLink> 
         </NavItem>
         <NavLink to="/recipe"  href="/recipe" className="links" > <i className="far fa-user"></i>Recipes </NavLink>
         <NavLink to="/comments"  href="/comments" className="links" > <i className="far fa-comments"></i> Chat </NavLink>
