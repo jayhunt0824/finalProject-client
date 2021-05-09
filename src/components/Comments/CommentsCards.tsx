@@ -13,13 +13,24 @@ export interface CommentsCardsProps {
  
 export interface CommentsCardsState {
     editComment: any;
+    userId: string | null;
+    role: string | null;
 }
  
 class CommentsCards extends React.Component<CommentsCardsProps, CommentsCardsState> {
     constructor(props: CommentsCardsProps) {
         super(props);
-        this.state = { editComment: null }
+        this.state = { editComment: null, userId: "", role: "" }
     }
+
+componentDidMount() {
+    const userId = localStorage.getItem("id") != null ? localStorage.getItem("id") : ""
+    const role= localStorage.getItem("role");
+
+    this.setState({role: role, userId: userId});
+}
+
+
     render() { 
         console.log(this.props.comment)
         return ( <div >
@@ -31,11 +42,11 @@ class CommentsCards extends React.Component<CommentsCardsProps, CommentsCardsSta
                   <div className="postWhiteDiv"></div>
                       {/* <CardTitle tag="h5">{this.props.comment.id}</CardTitle> */}
                       <div>
-                      <CardSubtitle id="postCom" tag="h6" className="mb-2 text-muted">{this.props.comment.comments}</CardSubtitle>
+                      <CardSubtitle id="postCom" tag="h6" className="mb-2 text-muted">{this.props.comment.comments} </CardSubtitle>
                       </div>
                       <CardText>{this.props.comment.ingredients}</CardText>
-                      <CommentsEdit sessionToken={this.props.sessionToken} fetchComments={this.props.fetchComments} editComment={this.state.editComment} id={this.props.comment.id}  />
-                      <Button className="deletepostbtn" onClick={()=>this.props.deleteComment(this.props.comment.id)}>Delete</Button>
+                     { this.state.role == "Admin" || this.props.comment.userId == this.state.userId  ?  <><CommentsEdit sessionToken={this.props.sessionToken} fetchComments={this.props.fetchComments} editComment={this.state.editComment} id={this.props.comment.id}  />
+                      <Button className="deletepostbtn" onClick={()=>this.props.deleteComment(this.props.comment.id)}>Delete</Button></> : null }
                   </CardBody>
               </Card>
               </div> );

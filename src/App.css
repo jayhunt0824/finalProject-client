@@ -520,19 +520,19 @@ z-index: 1;
    width: 150px;
   background-color: #FEE140;
   background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
-  position: relative;
-  bottom: 418px;
-left: -90px;
+  position: absolute;
+  bottom: -220px;
+left: -40px;
   z-index: 5;
   color: white;
  }
 
  .mycardeditbtn{
-  width: 150px;
+  width: 200px;
  background-color: #FEE140;
  background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
- position: relative;
- bottom: 380px;
+ position: absolute;
+ bottom: -220px;
 left: -250px;
  z-index: 5;
  color: white;
@@ -541,6 +541,7 @@ left: -250px;
 .commentCard{
   position: relative;
   top: 400px;
+  width: 700px;
 height: 200px;
   text-align: center;
   right: 220px;
@@ -552,12 +553,13 @@ height: 200px;
 
 .postWhiteDiv{
   height: 200px;
-  width: 731px;
+  width: 700px;
 z-index: 1;
   background-color: white;
   opacity: 60%;
   position: relative;
-  bottom: 220px;
+  bottom: 221px;
+  border-radius: 5px;
   right: 21px;
 
   
@@ -567,9 +569,9 @@ z-index: 1;
 .deletepostbtn{
   background-color: #FEE140;
   background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
-  position: relative;
-  bottom: 388px;
-  left: 200px;
+  position: absolute;
+  bottom: 10px;
+  left: 480px;
   z-index: 4;
   width: 150px;
 
@@ -578,14 +580,24 @@ z-index: 1;
 .editpostbtn{
   background-color: #FEE140;
   background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
-  position: relative;
+  position: absolute;
   z-index: 4;
-  bottom: 350px;
+  bottom: 10px;
   width: 150px;
-  left: 28px;
+  left: 316px;
 }
 
+#postcontainer{
+  margin-bottom: 900px;
+}
 
+.updatepostbtn{
+  background-color: #FEE140;
+  background-image: linear-gradient(90deg, #FEE140 0%, #ee0854 100%);
+  width: 200px;
+  position: relative;
+  left: 120px;
+}
 
 #postCom{
   z-index: 3;
@@ -593,6 +605,7 @@ z-index: 1;
   bottom: 370px;
   left: 300px;
   width: 350px;
+  font-size: 18px;
   text-align: left;
 }
 
@@ -615,5 +628,8 @@ z-index: 1;
 
 .postimg{
   z-index: 5;
+  position: relative;
+  top: -1px;
+  right: 1px;
 }
 

@@ -75,12 +75,13 @@ toggle=()=>{
           <div>
              <Button className="editpostbtn" onClick={this.toggle}>Edit</Button>
       <Modal isOpen={!this.state.modal} toggle={this.toggle} >
-        <ModalHeader className="myModalHeader2" toggle={this.toggle}>Modal title</ModalHeader>
-        <ModalBody style={{height: "500px"}}>
+        <ModalHeader className="myModalHeader2" toggle={this.toggle}></ModalHeader>
+        <ModalBody style={{height: "300px"}}>
         <Form onSubmit={(event)=>this.commentUpdate(event)} >
             <FormGroup>
-              <Label htmlFor="Name"> Edit comments:</Label>
+              <Label htmlFor="Name"> Edit comment:</Label>
               <Input
+               style={{height: "200px"}}
                 name="result"
                 value={this.state.editComments}
                 onChange={(e) => this.setState({editComments: e.target.value})}
@@ -89,7 +90,7 @@ toggle=()=>{
         
     
             
-        <Button onClick={this.toggle} type="submit">Update the Recipe!</Button>
+        <Button className="updatepostbtn" onClick={this.toggle} type="submit">Update!</Button>
           </Form>
         </ModalBody>
         <ModalFooter>

@@ -74,6 +74,7 @@ export class Login extends React.Component<LoginProps, LoginState> {
         .then((data) => {
           this.props.updateToken(data.sessionToken);
           this.props.updateRole(data.user.role)
+          localStorage.setItem("id", data.user.id);
           console.log(data);
         });
 
