@@ -19,7 +19,7 @@ export interface UserRecipeEditProps {
     // updateOff: Function;
     editComment: any;
     id: number ;
-  
+
    
 }
  
@@ -30,7 +30,7 @@ export interface UserRecipeEditState {
     editPhotoURL: string;
     // recipe: this.props.recipeUpdate ? this.props.recipeUpdate.id: null
     modal: boolean;
-    
+ 
     
 }
  
